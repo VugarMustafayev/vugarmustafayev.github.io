@@ -92,13 +92,98 @@ color: var(--main-color);
 .navlist a.active{
     color: var(--text-color);
 }
-#menu-icon{
-    font-size: 35px;
-    color: var(--text-color);
-    z-index: 10001;
-    cursor: pointer;
-    margin-left: 25px;
-    display: none;
+#menu {
+  z-index: 2;
+}
+
+#menu-bar {
+  width: 45px;
+  height: 40px;
+  margin: 30px 0 20px 20px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 5px;
+  width: 100%;
+  background-color: #DC052D;
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+.nav {
+  transition: 0.3s ease;
+  display: none;
+}
+
+.nav ul {
+  padding: 0 22px;
+}
+
+.nav li {
+  list-style: none;
+  padding: 12px 0;
+}
+
+.nav li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  font-weight: bold;
+}
+
+.menu-bg, #menu {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.menu-bg {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  margin: 30px 0 20px 20px;
+  background: radial-gradient(circle, #DC052D, #DC052D);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.change {
+  display: block;
+}
+
+.change .bar {
+  background-color: white;
+}
+
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.change #bar3 {
+  transform: translateY(-6px) rotateZ(45deg);
+}
+
+.change-bg {
+  width: 520px;
+  height: 460px;
+  transform: translate(-60%,-30%);
 }
 
 section{
@@ -174,6 +259,7 @@ section{
     align-items: center;
     justify-content: center;
 }
+
 .button1{
     display: inline-flex;
     align-items: center;
@@ -213,6 +299,29 @@ section{
 }
 .pagebtn:hover{
     transform: scale(0.9);
+}
+.pagebtn0 {
+    min-width: 200px;
+    align-items: center;
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--main-color);
+  border-radius: 50px;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: all 0.45s ease;
+  margin-right: -50px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+  box-shadow: 6px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pagebtn0:hover {
+  transform: scale(0.95);
+  opacity: 1;
+  box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.2), 6px 6px 20px rgba(0, 0, 0, 0.3);
 }
 .pagebtn2{
     display: inline-block;
@@ -342,7 +451,7 @@ section{
 .page4-3btn:hover{
     transform: scale(0.9);
 }
-page5btn{
+.page5btn{
     display: inline-block;
     padding: 10px 20px;
     background: var(--main-color);
@@ -355,9 +464,95 @@ page5btn{
     margin-right: 10px;
     margin-bottom: 15px;
 }
-page5btn:hover{
+.page5btn:hover{
     transform: scale(0.9);
 }
+.page6btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--main-color);
+    border-radius: 50px;
+    color: var(--text-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all .45s ease;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+.page6btn:hover{
+    transform: scale(0.9);
+}
+.page6-2btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--main-color);
+    border-radius: 50px;
+    color: var(--text-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all .45s ease;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+.page6-2btn:hover{
+    transform: scale(0.9);
+}
+.page7btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--main-color);
+    border-radius: 50px;
+    color: var(--text-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all .45s ease;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+.page7btn:hover{
+    transform:scale(0.9) ;
+}
+.page8btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--main-color);
+    border-radius: 50px;
+    color: var(--text-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all .45s ease;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+.page8btn:hover{
+    transform: scale(0.9);
+}
+.page9btn {
+    min-width: 200px;
+    align-items: center;
+  display: inline-block;
+  padding: 5px 15px;
+  background: var(--main-color);
+  border-radius: 50px;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: all 0.45s ease;
+  opacity: 0.8;
+  box-shadow: 6px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.page9btn:hover {
+  transform: scale(0.95);
+  opacity: 1;
+  box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.2), 6px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
 .btn1{
     display: inline-block;
     padding: 10px 20px;
@@ -400,7 +595,37 @@ page5btn:hover{
     transform: scale(0.9);
     box-shadow: 2px 2px 5px whitesmoke;
 }
-.btn2{
+.btn2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-left: 35px;
+}
+.btn2 span i {
+  height: 60px;
+  width: 60px;
+  background-color: var(--main-color);
+  opacity: 0.8;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  border-radius: 50%;
+  margin-left: 50px;
+  margin-right: 15px;
+  transition: all 0.45s ease;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.btn2:hover span i {
+  transform: scale(0.9);
+  opacity: 1;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.btn4 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -408,15 +633,13 @@ page5btn:hover{
     font-weight: 600;
     color: var(--text-color);
     margin-left: 35px;
-    
-   
 }
-.btn2 span i{
+.btn4 span i{
     height: 60px;
     width: 60px;
-    background-color: var(--main-color) ;
+    background-color: var(--main-color);
     opacity: 80%;
-    color: var(--text-color) ;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -424,9 +647,8 @@ page5btn:hover{
     border-radius: 50%;
     margin-left: 50px;
     margin-right: 15px;
-    transition: all .45s ease;
+    transition: all .45 ease;
     box-shadow: 5px 5px 5px whitesmoke;
-    
 }
 .btn2 span i:hover{
     transform: scale(0.9) translateX(5px);
@@ -443,6 +665,10 @@ header.sticky{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 3rem;
+    background-image: url('https://r.resimlink.com/ocDZhqukU_.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     background-color: transparent;  
     width: auto;
     width: 100%;
@@ -452,11 +678,17 @@ header.sticky{
     display: grid; 
     align-items: center;
     gap: 3rem;
-    background: linear-gradient(to bottom , #fde618, #f44336);
+    background-image: url('https://r.resimlink.com/POh14zXAVD.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    transform-style: preserve-3d;
+    perspective: 1px;
     opacity: 80%;
     width: auto;
     backdrop-filter: blur(5px);
     width: 100%;
+    box-shadow: 0px 100px 100px black;
 
 }
 .box1page1 .box{
@@ -483,6 +715,7 @@ header.sticky{
     width: auto;
     width: 100%;
     opacity: 80%;
+    box-shadow: 0px 100px 100px black;
 }
 .box1-2page .box{
     opacity: 80%;
@@ -499,11 +732,16 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background: linear-gradient(to bottom, #4f000b, #1a1a1a);
+    background: linear-gradient(to bottom , #fde618, #f44336);
+    transform-style: preserve-3d;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
     backdrop-filter: blur(5px);
     opacity: 80%;
     width: auto;
     width: 100%;
+    box-shadow: 0px 100px 100px black;
 }
 .box1-3page .box{
     opacity: 80%;
@@ -530,6 +768,7 @@ header.sticky{
     width: auto;
     width: 100%;
     opacity: 80%;
+    box-shadow: 0px 100px 100px black;
 }
 .box1-4page .box{
     opacity: 80%;
@@ -545,11 +784,18 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background: linear-gradient(to bottom , #fde618, #f44336);
+    background-image: url('https://r.resimlink.com/POh14zXAVD.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    perspective: 1px;
+    background-position: center center;
     backdrop-filter: blur(5px);
     width: auto;
     width: 100%;
     opacity: 80%;
+    box-shadow: 0px 100px 100px black;
 }
 .box2page2 .box{
     opacity: 80%;
@@ -576,6 +822,7 @@ header.sticky{
     width: auto;
     width: 100%;
     opacity: 80%;
+    box-shadow: 0px 100px 100px black;
 }
 .box2-2page2 .box{
     opacity: 80%;
@@ -603,7 +850,7 @@ header.sticky{
     width: auto;
     width: 100%;
     opacity: 80%;
-    box-shadow: 0px 25px 100px chocolate;
+    box-shadow: 0px 100px 100px black;
 }
 .box4page4 .box{
     opacity: 80%;
@@ -619,7 +866,7 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background: linear-gradient(to bottom, #4f000b, #1a1a1a);
+    background: linear-gradient(to bottom , #fde618, #f44336);
     backdrop-filter: blur(5px);
     background-attachment: fixed;
     transform-style: preserve-3d;
@@ -630,7 +877,7 @@ header.sticky{
     width: auto;
     width: 100%;
     opacity: 80%;
-    box-shadow: 0px 25px 100px chocolate;
+    box-shadow: 0px 100px 100px black;
 }
 .box4-2page4 .box{
     opacity: 80%;
@@ -656,7 +903,7 @@ header.sticky{
     width: auto;
     width: 100%;
     opacity: 80%;
-    box-shadow: 0px 25px 100px chocolate; 
+    box-shadow: 0px 100px 100px black;
 }
 .box4-3page4 .box{
     opacity: 80%;
@@ -671,11 +918,17 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background: linear-gradient(to bottom , #fde618, #f44336);
-    backdrop-filter: blur(5px);
+    background-image: url('https://r.resimlink.com/POh14zXAVD.jpg');
+    backdrop-filter: blur(50px);
+    background-size: cover;
+    background-attachment: fixed;
+    transform-style: preserve-3d;
+    background-position: center center;
+    perspective: 1px;
     width: auto;
     width: 100%;
     opacity: 80%;
+    box-shadow: 0px 100px 100px black;
 }
 .box5page5 .box{
     opacity: 80%;
@@ -690,28 +943,104 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background-color: transparent;
+    background-image: url('https://r.resimlink.com/nqGbFS9-dcW.gif');
+    backdrop-filter: blur(5px);
+    background-attachment: fixed;
+    transform-style: preserve-3d;
+    perspective: 1px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     width: auto;
     width: 100%;
-    box-shadow: 0px 25px 100px chocolate;
+    opacity: 80%;
+    box-shadow: 0px 100px 100px black;
+}
+.box6page6 .box{
+    opacity: 80%;
+    text-shadow: 2px 2px 5px black;
+}
+.box6page6 .box:hover{
+    opacity: 100%;
+    text-shadow: 0px 0px;
+    color: white;
+}
+.box6-2page6{
+    display: grid;
+    align-items: center;
+    gap: 3rem;
+    background: linear-gradient(to bottom , #fde618, #f44336);
+    backdrop-filter: blur(5px);
+    background-attachment: fixed;
+    transform-style: preserve-3d;
+    perspective: 1px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: auto;
+    width: 100%;
+    opacity: 80%;
+    box-shadow: 0px 100px 100px black;
+}
+.box6-2page6 .box{
+    opacity: 80%;
+    text-shadow: 2px 2px 5px black;
+}
+.box6-2page6 .box:hover{
+    opacity: 100%;
+    text-shadow: 0px 0px;
+    color: white;
 }
 .box7page7{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background-color: black;
+    background: url('https://r.resimlink.com/nqGbFS9-dcW.gif') ;
+    backdrop-filter: blur(5px);
+    background-attachment: fixed;
+    transform-style: preserve-3d;
+    perspective: 1px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     width: auto;
     width: 100%;
-    box-shadow: 0px -25px 100px chocolate;
+    box-shadow: 0px 100px 100px black;
+}
+.box7page7 .box{
+    opacity: 80%;
+    text-shadow: 2px 2px 5px black;
+}
+.box7page7 .box:hover{
+    opacity: 100%;
+    text-shadow: 0px 0px;
+    color: white;
 }
 .box8page8{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background-color: transparent;
+    background-image: url('https://r.resimlink.com/POh14zXAVD.jpg');
+    backdrop-filter: blur(5px);
+    background-attachment: fixed;
+    transform-style: preserve-3d;
+    perspective: 1px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     width: auto;
     width: 100%;
-    box-shadow: 0px 25px 100px chocolate;
+    opacity: 80%;
+    box-shadow: 0px 100px 100px black;
+}
+.box8page8 .box{
+    opacity: 80%;
+    text-shadow: 2px 2px 5px black;
+}
+.box8page8 .box:hover{
+    opacity: 100%;
+    text-shadow: 0px 0px;
+    color: white;
 }
 .about-text .box{
     opacity: 80%;
@@ -796,6 +1125,13 @@ header.sticky{
     border-radius: 100px;
     background-position: left top;
 }
+.box6-2img img{
+    max-width: 600px;
+    height: auto;
+    width: 100%;
+    border-radius: 100px;
+    background-position: left top;
+}
 .box7-img img{
     max-width: 600px;
     height: auto;
@@ -847,6 +1183,12 @@ header.sticky{
     box-shadow: 10px 10px chocolate;
 }
 .box6-img img:hover{
+    transform: translateY(-10px);
+    transition: all .45s ease;
+    cursor: pointer;
+    box-shadow: 10px 10px chocolate;
+}
+.box6-2img img:hover{
     transform: translateY(-10px);
     transition: all .45s ease;
     cursor: pointer;
@@ -911,6 +1253,10 @@ header.sticky{
     line-height: 1;
 }
 .box6-text h2{
+    font-size: var(--h2-font);
+    line-height: 1;
+}
+.box6-2text h2{
     font-size: var(--h2-font);
     line-height: 1;
 }
@@ -990,6 +1336,12 @@ header.sticky{
     box-shadow: 10px 10px 5px black;
 }
 .box6-text .box{
+    margin-bottom: 20px;
+    border-radius: 100;
+    background-color: var(--main-color);
+    box-shadow: 10px 10px 5px black;
+}
+.box6-2text .box{
     margin-bottom: 20px;
     border-radius: 100;
     background-color: var(--main-color);
@@ -1183,7 +1535,8 @@ header.sticky{
     margin-bottom: 2rem;
 }
 .services{
-    background: black;
+    background: linear-gradient(to bottom , black, rgb(37, 37, 37));
+    background-attachment: fixed; 
     width: 100%;
 }
 .main-text{
@@ -1225,48 +1578,39 @@ header.sticky{
    opacity: 90%;
 }
 .box1{
-    background: var(--bg-color) ;
+    background: var(--bg-color);
+    min-width: 20px;
+    min-height: 500px;
     padding: 40px 30px;
-    min-height: 450px;
     border-radius: 50px;
     transition: all .45s ease;
     margin-bottom: 20px;
-    background-image: url(https://r.resimlink.com/b_1rvN4Rcy7.jpg);
-    background-size: cover;
+    background-image: url('https://r.resimlink.com/b_1rvN4Rcy7.jpg');
+    background-size: cover ;
     background-position: center;
 }
 .box2{
     background: var(--bg-color);
     min-width: 20px;
-    min-height: 450px;
+    min-height: 500px;
     padding: 40px 30px;
     border-radius: 50px;
     transition: all .45s ease;
     margin-bottom: 20px;
-    background-image: url();
+    background-image: url('https://r.resimlink.com/EjYK8.jpg');
     background-size: cover ;
-    background-position: center;
-    
+    background-position: center;   
 }
-.box3{
-    background: var(--bg-color);
-    padding: 40px 30px;
-    border-radius: 50px;
-    min-height: 450px;
-    transition: all .45s ease;
-    margin-bottom: 20px;
-    background-image: url();
-    background-size: cover;
-    background-position: center;
-}
+
 .box4 {
     background: var(--bg-color);
     padding: 40px 30px;
     border-radius: 50px;
-    min-height: 450px;
+    min-width: 20px;
+    min-height: 500px;
     transition: all .45s ease;
     margin-bottom: 20px;
-    background-image: url();
+    background-image: url('https://r.resimlink.com/ZWQIyrGnz.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -1274,10 +1618,10 @@ header.sticky{
     background: var(--bg-color);
     padding: 40px 30px;
     border-radius: 50px;
-    min-height: 450px;
+    min-height: 500px;
     transition: all .45s ease;
     margin-bottom: 20px;
-    background-image: url();
+    background-image: url('https://r.resimlink.com/GSvoE9Q-.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -1285,10 +1629,10 @@ header.sticky{
     background-color: var(--bg-color);
     padding: 40px 30px;
     border-radius: 50px;
-    min-height: 450px;
+    min-height: 500px;
     transition: all .45s ease;
     margin-bottom: 20px;
-    background-image: url();
+    background-image: url('https://r.resimlink.com/OLN_yoJUVRv.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -1296,10 +1640,10 @@ header.sticky{
     background-color: var(--bg-color);
     padding: 40px 30px;
     border-radius: 50px;
-    min-height: 450px;
+    min-height: 500px;
     transition: all .45s ease;
     margin-bottom: 20px;
-    background-image: url();
+    background-image: url('https://r.resimlink.com/DAyImO.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -1307,12 +1651,12 @@ header.sticky{
     background-color: var(--bg-color);
     padding: 40px 30px;
     border-radius: 50px;
-    min-height: 450px;
+    min-height: 500px;
     transition: all .45s ease;
     margin-bottom: 20px;
-    background-image: url();
+    background-image: url('https://r.resimlink.com/dmNF9O.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: right;
 }
 .s-icons1{
     font-size: 32px;
@@ -1320,6 +1664,7 @@ header.sticky{
 }
 .box1{
     opacity: 80%;
+    
 }
 .box1:hover{
     opacity: 100%;
@@ -1336,7 +1681,6 @@ header.sticky{
     width: 0;
     margin-right: -0.2em;
     border-right: 0.1em solid #333;
-    animation: typingAnimation 4s steps(22) forwards;
 }
 .box1:hover h3{
     color: white;
@@ -1446,8 +1790,7 @@ header.sticky{
 .box1:hover{
     transform: translateY(-10px);
     cursor: pointer;
-    box-shadow: 10px 10px chocolate;  
-     
+    box-shadow: 10px 10px chocolate;       
 }
 
 .box2:hover{
@@ -1616,13 +1959,21 @@ header.sticky{
     transform: translateY(-10px);
     cursor: pointer;
 }
-.portfolio{
-    background-color: black;
+.duyuru{
+    background: linear-gradient(to bottom , black, rgb(37, 37, 37));
+    background-position: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 80%;
+    background-attachment: scroll;
+    
 }
-.portfolio-content{
+.duyuru-content{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-   align-items: center; 
+   align-items: center;
    gap: 2.5rem;
    margin-top: 5rem;   
 }
@@ -1637,11 +1988,12 @@ header.sticky{
    border-radius: 8px;
    display: block;
    transition: transform 0.5s;
+
 }
 .layer{
    width: 100%;
    height: 0%;
-   background: linear-gradient(rgba(0,0,0,0.1), darkolivegreen) ;
+   background: linear-gradient(rgba(0,0,0,0.1), chocolate) ;
    position: absolute;
    border-radius: 8px;
    left: 0;
@@ -1684,45 +2036,61 @@ header.sticky{
    height: 100%;   
 }
 .contact{
-   background:var(--second-bg-color) ; 
+   background-image: url('https://r.resimlink.com/nqGbFS9-dcW.gif');
+   background-position: center;
+   background-repeat: no-repeat; 
+   background-size: cover;
+   background-attachment: scroll;
+   background-attachment: scroll;
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
    align-items: center;
    gap: 2.5rem;
+   opacity: 80%;
 }
 .contact h4{
-   color: var(--text-color);
+   color: white;
    margin: 18px 0;
-   font-size: 20px;
+   font-size: 40px;
    font-weight: 600;
 }
 .contact-text h2{
+   color: white;
    font-size: 15mm;
    line-height: 1;
    margin-bottom: 15px;
 }
 .contact-text p{
-   color: var(--second-color);
-   font-size: 5mm;
+   color: white;
+   font-size: 7mm;
    line-height: 1.8;
    margin-bottom: 20px; 
 }
-.list{
-  margin-bottom: 1.5rem;  
+.list li {
+  margin-bottom: 10px;
+  line-height: 1.5; /* Satırlar arası mesafe */
 }
-.list li{
-    margin-bottom: 10px;
+
+.list li a {
+  display: block;
+  color: whitesmoke;
+  font-size: 4mm;
+  transition: all 0.45s ease;
 }
-.list li a{
-    display: block;
-    color: whitesmoke;
-    font-size: 14px;
-    transform: all .45s ease;
+
+.list li a:hover {
+  color: var(--text-color);
+  animation-fill-mode: both; /* Animasyonun başlangıç ve bitiş durumunu korumasını sağlar */
 }
-.list li a:hover{
-    color: var(--text-color);
-    transform: translateX(3px) translateY(-3px);
+
+@keyframes bounce {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-5px) translateY(5px); }
+  100% { transform: translateX(0) translateY(0); }
 }
+.list li a.animate {
+  animation: bounce 1.5s ease infinite;
+}
+
 .contact-icons i{
     height:  45px;
     width: 45px;
@@ -1763,86 +2131,117 @@ header.sticky{
 }
 
 .box1page1 .pagebtn {
-    width: 150px;
-    font-size: 0.7rem;
-    box-shadow: 3px 3px 5px black;
+    width: 140px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 5px black;
 }
 .box1page1 .pagebtn:hover{
     box-shadow: 0px 0px;
 }
 .box1-2page .pagebtn2{
-    width: 180px;
-    font-size: 0.7rem;
-    box-shadow: 3px 3px 5px black;
+    width: 140px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 5px black;
 }
 .box1-2page .pagebtn2:hover{
     box-shadow: 0px 0px;
 }
 .box1-3page .pagebtn3{
-    width: 180px;
-    font-size: 0.7rem;
-    box-shadow: 3px 3px 5px black;
+    width: 140px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 5px black;
 }
 .box1-3page .pagebtn3:hover{
     box-shadow: 0px 0px;
 }
 .box1-4page .pagebtn4{
-    width: 180px;
-    font-size: 0.7rem;
-    box-shadow: 3px 3px 5px black;
+    width: 140px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 5px black;
 }
 .box1-4page .pagebtn4:hover{
     box-shadow: 0px 0px;
 }
 .box2page2 .page2btn{
-    width: 180px;
-    font-size: 0.7rem;
-    box-shadow: 3px 3px 5px black;
+    width: 140px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 5px black;
 }
 .box2page2 .page2btn:hover{
     box-shadow: 0px 0px;
 }
 .box2-2page2 .page2btn2{
-    width: 180px;
-    font-size: 0.7rem;
-    box-shadow: 3px 3px 5px black;
+    width: 140px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 5px black;
 }
 .box2-2page2 .page2btn2:hover{
     box-shadow: 0px 0px;
 }
 .box4page4 .page4btn{
-    width: 180px;
-    font-size: 0.7rem;
-    box-shadow: 3px 3px 5px black;
+    width: 140px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 5px black;
 }
 .box4page4 .page4btn:hover{
     box-shadow: 0px 0px;
 }
 .box4-2page4 .page4-2btn {
-    width: 180px;
-    font-size: 0.7rem;
-    box-shadow: 3px 3px 5px black;
+    width: 140px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 5px black;
 }
 .box4-2page4 .page4-2btn:hover{
     box-shadow: 0px 0px;
 }
 .box4-3page4 .page4-3btn{
-    width: 180px;
-    font-size: 0.7rem;
-    box-shadow: 3px 3px 5px black;
+    width: 140px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 5px black;
 }
 .box4-3page4 .page4-3btn:hover{
     box-shadow: 0px 0px;
 }
-.box5page5 page5btn{
-    width: 180px;
-    font-size: 0.7rem;
-    box-shadow: 3px 3px 5px black;
+.box5page5 .page5btn{
+    width: 140px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 5px black; 
 }
-.box5page5 page5btn:hover{
+.box5page5 .page5btn:hover{
     box-shadow: 0px 0px;
 }
-
+.box6page6 .page6btn{
+    width: 140px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 5px black;
+}
+.box6page6 .page6btn:hover{
+    box-shadow: 0px 0px;
+}
+.box6-2page6 .page6-2btn{
+    width: 140px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 5px black;
+}
+.box6-2page6 .page6-2btn:hover{
+    box-shadow: 0px 0px;
+}
+.box7page7 .page7btn{
+    width: 140px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 5px black;
+}
+.box7page7 .page7btn:hover{
+    box-shadow: 0px 0px;
+}
+.box8page8 .page8btn{
+    width: 140px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 5px black;
+}
+.box8page8 .page8btn:hover{
+    box-shadow: 0px 0px;
+}
 
 @media (max-width: 1480px){
     header{
@@ -1969,11 +2368,16 @@ header.sticky{
         grid-template-columns: repeat(2, 1fr);
     }
    }
+@media(min-width: 840px) {
+    .box6-2page6{
+        grid-template-columns: repeat(2,1fr);
+    }
+   }
 @media(min-width: 840px){
     .box7page7{
         grid-template-columns: repeat(2, 1fr);
     }
-   }
+}
 @media(min-width: 840px){
     .box8page8{
         grid-template-columns: repeat(2, 1fr);
@@ -2076,10 +2480,6 @@ header.sticky{
 }
 .flip-card:hover .flip-card-back{
     transform: rotatey(0deg);
-}
-.galeri{
-    height: 600px;
-    width: auto;
 }
 
 .box1-img{
@@ -2260,6 +2660,132 @@ header.sticky{
     opacity: 100%;
     animation: slide 10s infinite linear;
 }
+.box5-img{
+    display: flex;
+    height: 30rem;
+    gap: 0.5rem;
+    flex: 1;
+    border-radius: 2rem;
+    background: transparent;
+    background-size: auto 100%;
+}
+.box5-img > div{
+    flex: 1;
+    border-radius: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    box-shadow: 5px 5px 5px black;
+    opacity: 80%;
+    animation: slide 15s infinite linear;
+}
+.box5-img > div:hover{
+    flex: 10;
+    opacity: 100%;
+    animation: slide 10s infinite linear;
+}
+.box6-img{
+    display: flex;
+    height: 30rem;
+    gap: 0.5rem;
+    flex: 1;
+    border-radius: 2rem;
+    background: transparent;
+    background-size: auto 100%;
+}
+.box6-img > div{
+    flex: 1;
+    border-radius: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    box-shadow: 5px 5px 5px black;
+    opacity: 80%;
+    animation: slide 15s infinite linear;
+}
+.box6-img >div:hover{
+    flex: 10;
+    opacity: 100%;
+    animation: slide 10s infinite linear;
+}
+.box6-2img{
+    display: flex;
+    height: 30rem;
+    gap: 0.5rem;
+    flex: 1;
+    border-radius: 2rem;
+    background: transparent;
+    background-size: auto 100%;
+}
+.box6-2img > div{
+    flex: 1;
+    border-radius: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    box-shadow: 5px 5px 5px black;
+    opacity: 80%;
+    animation: slide 15s infinite linear;
+}
+.box6-2img > div:hover{
+    flex: 10;
+    opacity: 100%;
+    animation: slide 10s infinite linear;
+}
+.box7-img{
+    display: flex;
+    height: 30rem;
+    gap: 0.5rem;
+    flex: 1;
+    border-radius: 2rem;
+    background: transparent;
+    background-size: auto 100%;
+}
+.box7-img > div{
+    flex: 1;
+    border-radius: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    box-shadow: 5px 5px 5px black;
+    opacity: 80%;
+    animation: slide 15s infinite linear;
+}
+.box7-img > div:hover{
+    flex: 10;
+    opacity: 100%;
+    animation: slide 10s infinite linear;
+}
+.box8-img{
+    display: flex;
+    height: 30rem;
+    gap: 0.5rem;
+    flex: 1;
+    border-radius: 2rem;
+    background: transparent;
+    background-size: auto 100%;
+}
+.box8-img > div{
+    flex: 1;
+    border-radius: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    box-shadow: 5px 5px 5px black;
+    opacity: 80%;
+    animation: slide 15s infinite linear;
+}
+.box8-img > div:hover{
+    flex: 10;
+    opacity: 100%;
+    animation: slide 10s infinite linear;
+}
+
 .box3-img {
     display: flex;
     height: 30rem;
@@ -2305,38 +2831,85 @@ header.sticky{
     opacity: 80%;
     animation: slide 15s infinite linear;
 }
-.box2-img > div:hover{
+.box3-2img > div:hover{
     flex: 10;
     opacity: 100%;
     animation: slide 10s infinite linear;
 }
-.box8-img{
-    display: flex;
-    height: 20rem;
-    gap: 0.5rem;
-    flex: 1;
-    border-radius: 2rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-}
-.box8-img > div {
-    flex: 1;
-    border-radius: 2rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);  
-    animation: slide 15s infinite linear;
-}
-.box8-img > div:hover{
-    flex: 10;
-    animation: slide 10s infinite linear;
-}
+
 .main-text h2{
     opacity: 80%;
 }
+.section-container {
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.harita-tanitim{
+    background-color: goldenrod;
+}
+.tanitim {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tanitim h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.tanitim p {
+  font-size: 16px;
+  color: #666;
+}
+
+.harita {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+  border: 0;
+  width: 100%;
+  height: 300px;
+}
+
+@media screen and (min-width: 600px) {
+  .section-container {
+    max-width: 600px;
+  }
+  
+  iframe {
+    height: 450px;
+  }
+}
+
+
+
  </style>
+ <script>
+    function showAlert() {
+      alert("Üzgünüz, şu anda mevcut değil. Lütfen, daha sonra tekrar deneyiniz");
+    }
+
+    window.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('.list li a');
+  links.forEach(function(link, index) {
+    link.style.animationDelay = (index * 0.1) + 's';
+    link.classList.add('animate');
+  });
+});
+
+</script>
+
+
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2349,17 +2922,19 @@ header.sticky{
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
    <body>
-      <header>
-          <a href="#" class="logo">Vugar Mustafa<span>yev</span>.</a>
-             <ul class="navlist">
-                <li><a href="#home" class="active" > Ana Səhifə </a></li>
-                <li><a href="#about" > Haqqımda </a></li>
-                <li><a href="#services" > Layihələrim </a></li>
-                <li><a href="#portfolio" > Qalareya </a></li>
-                <li><a href="#contact" > Əlaqə </a></li>
-             </ul>
-          <div class="bx bx-menu" id="menu-icon"></div> 
+    <header>
+        <a href="#" class="logo">Vugar Mustafa<span>yev</span>.</a>
+        <div class="menu-icon" id="menu-icon"></div>
+        <ul class="navlist" id="navlist">
+          <li><a href="#home" class="active">Ana Səhifə</a></li>
+          <li><a href="#aboutid">Haqqımda</a></li>
+          <li><a href="#services">Layihələrim haqqında</a></li>
+          <li><a href="#portfolio">Yeni Layihələrim</a></li>
+          <li><a href="#contact">Əlaqə</a></li>
+        </ul>
+
       </header>
+      
    
 <!--home section design-->
     <section class="home" id="home">
@@ -2370,24 +2945,23 @@ header.sticky{
                 </div>
                     <h1>Vüqar Mustafayev</h1>
                     <h3> Şəki Tarix - Diyarşünaslıq Muzeyi <span> Müdiri </span></h3>
-
+                    
                 <div class="button">
-                    <a href="#about" class="btn1"> Mənim haqqımda məlumat almaq </a>   
-                    <a href="#portfolio" class="btn2"><span><i class='bx bx-play'></i></span> Layihələrlə tanış olmaq </a>
+                    <a href="#aboutid" class="pagebtn0">Mənim haqqımda məlumat almaq</a>
+                    <a href="#services" class="btn2"><span><i class='bx bx-play'></i></span> Layihələrlə tanış olmaq </a>
                 </div><br> 
-                <div class="button1" href="#about1">
-                    <a href="#about1" class="btn1"> Muzey haqqında məlumat almaq </a>
+                <div class="button1">
+                    <a href="#about1id" class="pagebtn0">Muzey haqqımda məlumat almaq</a>
                 </div>  
             </div>
         </div>
     </section>
 
 <!--about section design-->
-    <section class="about" id="about">
+    <section class="about" id="aboutid">
         <div class="about-img" >  
             <img  align="center" src="https://r.resimlink.com/x8H9_vw5n0uQ.jpg" alt="Teknik Hata Oluştu" > <br><br><br><br>
-            <img  align="center" src="https://r.resimlink.com/yMNoRxH.jpg"> <br><br><br><br>
-            <img  align="center" src=" https://r.resimlink.com/-_GAZT.jpg"> <br><br><br><br>
+            <img  align="center" src="https://r.resimlink.com/Vgnli0_.jpg"> <br><br><br><br>
         </div>
         <div class="about-text">
             <h2>Mənim <span>Haqqımda</span></h2>
@@ -2398,7 +2972,7 @@ header.sticky{
                                 <b>1985 -1995</b>
                 </div>
                 <div class="box" align="center">
-                    İstanbul Universiteti Rus dili və ədəbiyyat fakulteti * İstanbul <br>
+                    İstanbul Universiteti Dil və Ədəbiyyat fakulteti * İstanbul <br>
                                 <b>1996–2000</b>   
                 </div>
                 <h2 align="center"> <br> İŞ TƏCRÜBƏSİ <br><br></h2>
@@ -2441,7 +3015,7 @@ header.sticky{
           </div>
     </section>
 <!--AboutMuseum-->
-    <section class="about" id="about1">
+    <section class="about" id="about1id">
         <div class="about-text">
             <h2> Şəki Tarix - Diyarşünaslıq Muzeyi <span> Haqqında</span></h2><br><br>
                 <div class="box" >
@@ -2454,6 +3028,7 @@ header.sticky{
         <br> <a href="#services" class="mbtn"> Layihələrim haqqında məlumat almaq </a> 
      </div>     
     </section>
+
 <!--service section design-->
     <section class="services" id="services">
         <div class="main-text">
@@ -2476,7 +3051,7 @@ header.sticky{
             </div>
                 <h3> Muzeyimizdə anım günləri <br> hörmət ilə anılır </h3>
                 <p> Muzeyimizdə anım günləri yüksək diqqətlə anılır ... </p>
-                <a href="#" class="read"> Daha çox məlumat almaq</a>
+                <a href="#box2page2" class="read"> Daha çox məlumat almaq</a>
         </div>
     <!--box4-->    
         <div class="box4">
@@ -2485,7 +3060,7 @@ header.sticky{
             </div>
                 <h3> Muzeyimizə dəvət etdiyimiz qonaqlar </h3>
                 <p>  Muzeyimizə bir-birindən dəyərli bir çox qonaq dəvət edilir ...  </p>
-                <a href="#" class="read">Daha çox məlumat almaq </a>
+                <a href="#box4page4" class="read">Daha çox məlumat almaq </a>
         </div>
     <!--box5-->
         <div class="box5">
@@ -2494,7 +3069,7 @@ header.sticky{
             </div>
                 <h3> Muzeyimizdə milli bayramlarımız qeyd olunur </h3>
                 <p> Muzeyimizdə milli bayramlarımız yüksək sevinc ilə qeyd olunur...  </p>
-                <a href="#" class="read">Daha çox məlumat al </a>
+                <a href="#box5page5" class="read">Daha çox məlumat al </a>
         </div>
     <!--box6-->   
         <div class="box6">
@@ -2503,16 +3078,16 @@ header.sticky{
             </div>
                 <h3> Muzeyimizdə regional yarışlar keçirilməkdədir</h3>
                 <p>  Muzeyimizdə regional yarışlar yüksək keyfiyyətdə keçirilir ...  </p>
-                <a href="#" class="read"">Daha çox məlumat al </a>
+                <a href="#box6page6" class="read"">Daha çox məlumat al </a>
         </div>
     <!--box7-->
         <div class="box7">
             <div class="s-icons1">
                 <i class='bx bx-chalkboard'></i>
             </div>
-                <h3> Muzeyimizdə dövlət orqanları ilə seminarlar keçirilməkdədir </h3>
-                <p>  Muzeyimizdə dövlət orqanları ilə birlikdə marifləndirici seminarlar keçirilir ...   </p>
-                <a href="#" class="read">Daha çox məlumat al </a>
+                <h3> Muzeyimizdə Milli adət və ənənələrin yaşadılması üçün tədbirlər keçirlməkdədir </h3>
+                <p>  Muzeyimizdə Milli adət və ənənələrin yaşadılması və gələcəy nəsillərə ötürülməsi üçün tədbirlər keçirilir ...   </p>
+                <a href="#box7page7" class="read">Daha çox məlumat al </a>
         </div>
 
         <div class="box8">
@@ -2521,15 +3096,15 @@ header.sticky{
             </div>
                 <h3> Muzeyimizdə zərərli vərdişələr əleyhinə seminarlar keçirilməkdədir </h3>
                 <p>  Muzeyimizdə gənclərimizin pis vərdişlərdən yayınması məqsədli seminarlar keçirilir ...      </p>
-                <a href="#" class="read">Daha çox məlumat al</a>
+                <a href="#box8page8id" class="read">Daha çox məlumat al</a>
         </div>
     </div>   
     </section>
 <!--box1page1 -->
-    <section class="box1page1">
+    <section class="box1page1" id="box1page1">
         <div class="box1-text">
             
-                <h2> Muzeyimizdə keçirilən <span> masterklaslar </span></h2><br><br>
+                <h2 align="center"> Muzeyimizdə keçirilən <span> masterklaslar </span></h2><br><br>
             <div class="box" id="box1page1box" align="center">
                
                 <h3>Təkəlduz sənəti</h3>
@@ -2554,15 +3129,17 @@ header.sticky{
             </div>     
     </section>
 <!--box1-2page-->
-    <section class="box1-2page">
+    <section class="box1-2page" id="box1-2page">
         <div class="box1-2text">
            <br><br>
            <div class="box"  align="center">
                 <h3>Piroqrafiya sənəti</h3>
-                    Memar, rəssam, pedaqoq ən əsası sənətinin mahir ustası olan Yaşar Nəbiyevin muzeyimizdə yandırma üsulu (piroqrafiya) ilə rəsmlərin hazırlanması metodikası ilə bağlı master klası keçirildi. Yaşar müəllim bu sənətlə maraqlanmaq, bu sənəti öyrənmək, yaşatmaq istəyən şəxslərə ödənişsiz olaraq sənətinin sirlərini paylaşdı. Master klasın iştirakçıları öyrəndiklərini əyani olaraq tətbiq etdilər.
-                    <br><br>
-                    <a href="https://www.google.com/search?q=piroqrafiya+s%C9%99n%C9%99ti&sxsrf=AJOqlzXijCxY4fHRWyGz_umQb3cfAfVmeg%3A1675587358046&ei=Hm_fY_XBAp6Uxc8Py9S26Ao&ved=0ahUKEwj1yJCqgf78AhUeSvEDHUuqDa0Q4dUDCA8&uact=5&oq=piroqrafiya+s%C9%99n%C9%99ti&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIHCCEQoAEQCjIHCCEQoAEQCjIHCCEQoAEQCjoKCAAQRxDWBBCwAzoHCCMQsAIQJ0oECEEYAEoECEYYAFDBAljdR2DJSmgGcAF4AIAB3AGIAaUVkgEGMC4xNS4xmAEAoAEByAEIwAEB&sclient=gws-wiz-serp" target="_blank"> <button class="pagebtn2">Piroqrafiya sənəti haqqında məlumat almaq</button></a>
-                    <a href="https://www.instagram.com/p/CbrTTJys8CI/?utm_source=ig_web_copy_link" target="_blank"><button class="pagebtn2">Masterklasa dair video rolikə baxmaq</button></a> 
+                 Memar, rəssam, pedaqoq ən əsası sənətinin mahir ustası olan Yaşar Nəbiyevin muzeyimizdə yandırma üsulu (piroqrafiya) ilə rəsmlərin hazırlanması metodikası ilə bağlı master klası keçirildi. <br><br>
+                    
+                 Yaşar müəllim bu sənətlə maraqlanmaq, bu sənəti öyrənmək, yaşatmaq istəyən şəxslərə ödənişsiz olaraq sənətinin sirlərini paylaşdı. Master klasın iştirakçıları öyrəndiklərini əyani olaraq tətbiq etdilər. <br><br>
+                
+                <a href="https://www.google.com/search?q=piroqrafiya+s%C9%99n%C9%99ti&sxsrf=AJOqlzXijCxY4fHRWyGz_umQb3cfAfVmeg%3A1675587358046&ei=Hm_fY_XBAp6Uxc8Py9S26Ao&ved=0ahUKEwj1yJCqgf78AhUeSvEDHUuqDa0Q4dUDCA8&uact=5&oq=piroqrafiya+s%C9%99n%C9%99ti&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIHCCEQoAEQCjIHCCEQoAEQCjIHCCEQoAEQCjoKCAAQRxDWBBCwAzoHCCMQsAIQJ0oECEEYAEoECEYYAFDBAljdR2DJSmgGcAF4AIAB3AGIAaUVkgEGMC4xNS4xmAEAoAEByAEIwAEB&sclient=gws-wiz-serp" target="_blank"> <button class="pagebtn2">Piroqrafiya sənəti haqqında məlumat almaq</button></a>
+                <a href="https://www.instagram.com/p/CbrTTJys8CI/?utm_source=ig_web_copy_link" target="_blank"><button class="pagebtn2">Masterklasa dair video rolikə baxmaq</button></a> 
             </div>
         </div>
         <div class="box1-2img" >
@@ -2578,13 +3155,13 @@ header.sticky{
         <br><br>
         <div class="box" align="center">
             <h3>Milli rəqslərimiz</h3>
-            Milli mədəniyyətimizin mühüm tərkib hissəsi olan rəqs sənətinə diqqəti cəlb etmək məqsədilə muzey “Dövlətin himayə etdiyi və qayğı göstərdiyi milli rəqs emalatxanası” adlı xüsusi tədbir təşkil edib. Seminarda kimsəsiz uşaqlar milli oyunların tarixini, mədəni əhəmiyyətini və öyrənmə üsullarını öyrəniblər. <br><br>
+             Milli mədəniyyətimizin mühüm tərkib hissəsi olan rəqs sənətinə diqqəti cəlb etmək məqsədilə muzey “Dövlətin himayə etdiyi və qayğı göstərdiyi milli rəqs emalatxanası” adlı xüsusi tədbir təşkil edib. Seminarda kimsəsiz uşaqlar milli oyunların tarixini, mədəni əhəmiyyətini və öyrənmə üsullarını öyrəniblər. <br><br>
 
-Yetimlər emalatxanada milli rəqslərin gözəlliyini, rəngarəngliyini öyrədərkən, özlərini bu sənətə həsr etmiş, müxtəlif rəqs üslublarını öyrənmişlər. Təlim keçmiş ustad rəqqaslar uşaqların rəqs bacarıqlarını inkişaf etdirmələri üçün lazımi tədris məlumatlarını bölüşdülər və bu yolla uşaqlar həm rəqs texnikalarını öyrəndilər, həm də milli oyunlarımızın gözəlliklərini kəşf etdilər. <br><br>
+             Yetimlər emalatxanada milli rəqslərin gözəlliyini, rəngarəngliyini öyrədərkən, özlərini bu sənətə həsr etmiş, müxtəlif rəqs üslublarını öyrənmişlər. Təlim keçmiş ustad rəqqaslar uşaqların rəqs bacarıqlarını inkişaf etdirmələri üçün lazımi tədris məlumatlarını bölüşdülər və bu yolla uşaqlar həm rəqs texnikalarını öyrəndilər, həm də milli oyunlarımızın gözəlliklərini kəşf etdilər. <br><br>
 
-Bu tədbir Dövlətin himayə etdiyi və qayğı göstərdiyi uşaqların təhsil və mədəni həyatlarında yeni təcrübə qazanmalarına, cəmiyyətdə daha möhkəm yer tutmalarına kömək etdi. Bundan əlavə, onların milli mədəniyyətimizə və rəqs sənətimizə marağının artırılması ilə mədəniyyətimizin zənginliyinin qorunması və gələcək nəsillərə ötürülməsi istiqamətində mühüm addım kimi qiymətləndirilib. <br><br>
+             Bu tədbir Dövlətin himayə etdiyi və qayğı göstərdiyi uşaqların təhsil və mədəni həyatlarında yeni təcrübə qazanmalarına, cəmiyyətdə daha möhkəm yer tutmalarına kömək etdi. Bundan əlavə, onların milli mədəniyyətimizə və rəqs sənətimizə marağının artırılması ilə mədəniyyətimizin zənginliyinin qorunması və gələcək nəsillərə ötürülməsi istiqamətində mühüm addım kimi qiymətləndirilib. <br><br>
 
-Muzeyin sosial problemlərə həssaslığı və sosial məsuliyyəti ön planda tutaraq keçirdiyi bu tədbir “Dövlətin himayə etdiyi və qayğı göstərdiyi uşaqlarla milli rəqs emalatxanası” adı altında elan edilmiş və muzeyin ictimai şüurunun artmasına öz töhfəsini vermişdir. <br><br>
+             Muzeyin sosial problemlərə həssaslığı və sosial məsuliyyəti ön planda tutaraq keçirdiyi bu tədbir “Dövlətin himayə etdiyi və qayğı göstərdiyi uşaqlarla milli rəqs emalatxanası” adı altında elan edilmiş və muzeyin ictimai şüurunun artmasına öz töhfəsini vermişdir. <br><br>
             <br><br>
             <a href="https://www.google.com/search?q=Az%C9%99rbaycan+milli+r%C9%99qsl%C9%99rimiz&oq=Az%C9%99rbaycan+milli+r%C9%99qsl%C9%99rimiz&aqs=chrome..69i57j33i160l3.9365j0j9&sourceid=chrome&ie=UTF-8" target="_blank"> <button class="pagebtn3" align="left"> Milli rəqslərimiz haqqında <br> məlumat almaq </button></a>
             <a href="https://www.instagram.com/tv/CdAsTCtvASH/?utm_source=ig_web_copy_link" target="_blank"> <button class="pagebtn3"> Milli rəqslərimiz haqqında video <br> rolikə baxmaq </button></a>
@@ -2604,7 +3181,9 @@ Muzeyin sosial problemlərə həssaslığı və sosial məsuliyyəti ön planda 
         <br><br>
         <div class="box" align="center">
              <h3>Şəbəkə sənəti</h3>
-             Bu günlərdə muzeydə “Şəbəkə Sənətinin İncəlikləri” adlı seminar keçirildi. Seminarda bu sənətin tarixi, inkişafı və əhəmiyyəti haqqında məlumat verilib. Seminar sənətsevərlər tərəfindən böyük maraqla izləndi və Şəbəkə Sənətinin incəliklərinə maraq oyatdı. Seminarda şəbəkə sənətini davam etdirən və gələcəy nəsillərə bu milli irsimizi ötürən Tofiq Rəsulov mövzu ilə bağlı dərin biliyi və təcrübəsi ilə iştirakçıların diqqətini cəlb etməyi bacarıb. Nəticədə seminar Şəbəkə Sənətinə marağı artırdı və bu sənətin tarixi əhəmiyyətinin nə qədər dərin olduğunu göstərdi. <br><br>
+             Bu günlərdə muzeydə “Şəbəkə Sənətinin İncəlikləri” adlı seminar keçirildi. Seminarda bu sənətin tarixi, inkişafı və əhəmiyyəti haqqında məlumat verilib. Seminar sənətsevərlər tərəfindən böyük maraqla izləndi və Şəbəkə Sənətinin incəliklərinə maraq oyatdı. <br><br>
+             
+             Seminarda şəbəkə sənətini davam etdirən və gələcəy nəsillərə bu milli irsimizi ötürən Tofiq Rəsulov mövzu ilə bağlı dərin biliyi və təcrübəsi ilə iştirakçıların diqqətini cəlb etməyi bacarıb. Nəticədə seminar Şəbəkə Sənətinə marağı artırdı və bu sənətin tarixi əhəmiyyətinin nə qədər dərin olduğunu göstərdi. <br><br>
              <a href="https://onn.az/medeniyyet/s%C9%99b%C9%99k%C9%99-ustasi-tofiq-r%C9%99sulov-bundan-sonra-inaniram-ki-musahib%C9%99/" target="_blank"><button class="pagebtn4"> Tofiq Rəsulov haqqında məlumat almaq</button></a>
              <a href="https://www.instagram.com/tv/CV4f9QoP5Zr/?utm_source=ig_web_copy_link" target="_blank"> <button class="pagebtn4"> Şəbəkə Sənətinə dair video <br> rolikə baxmaq </button></a>
             </div>
@@ -2618,7 +3197,7 @@ Muzeyin sosial problemlərə həssaslığı və sosial məsuliyyəti ön planda 
 </section>
 
 <!--section box2 page2 tasarım-->
-<section class="box2page2">
+<section class="box2page2" id="box2page2">
     <div class="box2-img" >
         <div align="center" style="background-image: url('https://r.resimlink.com/wGXaVc.jpg');"></div>
         <div align="center" style="background-image: url('https://r.resimlink.com/EjYK8.jpg');"></div>
@@ -2626,32 +3205,25 @@ Muzeyin sosial problemlərə həssaslığı və sosial məsuliyyəti ön planda 
         <div align="center" style="background-image: url('https://r.resimlink.com/NU4A_XPvF.jpg');"></div> <br><br>
      </div>   
      <div class="box2-text">
-        <h2> Muzeyimizdə <span>anım günləri</span> hörmət ilə anılır</h2> <br><br>
+        <h2 align="center"> Muzeyimizdə <span>anım günləri</span> hörmət ilə anılır</h2> <br><br>
         <div class="box" align="center">
             <h3 align="center">20 yanvar </h3>
-            1990-cı il yanvarın 20-si Azərbaycan tarixində acı bir hadisənin şahidi oldu. Sovet İttifaqının dağılması zamanı Azərbaycanın paytaxtı Bakıda törədilən qırğın 137 dinc sakinin ölümünə, 800-dən çox insanın yaralanmasına səbəb olub. Bu kədərli hadisəni xatırlamaq və gələcək nəsillərə çatdırmaq məqsədi ilə 20 Yanvar Ağrıları Anma Günü ilə əlaqədar muzeyimizdə seminar keçirildi. <br><br>
+             1990-cı il yanvarın 20-si Azərbaycan tarixində acı bir hadisənin şahidi oldu. Sovet İttifaqının dağılması zamanı Azərbaycanın paytaxtı Bakıda törədilən qırğın 137 dinc sakinin ölümünə, 800-dən çox insanın yaralanmasına səbəb olub. Bu kədərli hadisəni xatırlamaq və gələcək nəsillərə çatdırmaq məqsədi ilə 20 Yanvar Ağrıları Anma Günü ilə əlaqədar muzeyimizdə seminar keçirildi. <br><br>
 
-Seminarda həmin dövrdə baş verən hadisələrin ətraflı izah edildiyi və qətliamın səbəbləri araşdırıldığı təqdimat keçirilib. Bundan əlavə, seminarda qətliamda həyatını itirən insanların ailələri ilə müsahibələr də təqdim olunub. Bununla da qətliamın törətdiyi ağrı və itkilərin insanların həyatına təsiri izah edilib və insanlar emosional olaraq seminarda iştirak etməyə sövq edilib. <br><br>
+             Seminarda həmin dövrdə baş verən hadisələrin ətraflı izah edildiyi və qətliamın səbəbləri araşdırıldığı təqdimat keçirilib. Bundan əlavə, seminarda qətliamda həyatını itirən insanların ailələri ilə müsahibələr də təqdim olunub. Bununla da qətliamın törətdiyi ağrı və itkilərin insanların həyatına təsiri izah edilib və insanlar emosional olaraq seminarda iştirak etməyə sövq edilib. <br><br>
 
-Seminarın keçirilməsində məqsəd 20 Yanvarın xatırlanması və bu ağrılı hadisənin unudulmamasıdır. Eyni zamanda, bu fəaliyyətlər sayəsində insanların bir araya gələrək bu cür ağrılı hadisələri xatırlaması, baş verənləri anlaması və gələcəkdə oxşar hadisələrin təkrarlanmaması üçün addımlar atması hədəflənir. <br><br>
+             Seminarın keçirilməsində məqsəd 20 Yanvarın xatırlanması və bu ağrılı hadisənin unudulmamasıdır. Eyni zamanda, bu fəaliyyətlər sayəsində insanların bir araya gələrək bu cür ağrılı hadisələri xatırlaması, baş verənləri anlaması və gələcəkdə oxşar hadisələrin təkrarlanmaması üçün addımlar atması hədəflənir. <br><br>
 
-Sonda muzeyimizdə keçirilən 20 Yanvar Acı Anım Günü ilə bağlı seminarda tarixi hadisələrin gələcəyə daşınmasında, eləcə də Azərbaycan tarixində mühüm hadisənin xatırlanmasında muzeylərin əhəmiyyəti vurğulanıb. Bu cür seminarların təşkili tarixi hadisələri daha yaxından tanımaq, gələcəkdə oxşar kədərli hadisələrin yaşanmaması üçün maarifləndirmə baxımından böyük əhəmiyyət kəsb edir. <br><br>
+             Sonda muzeyimizdə keçirilən 20 Yanvar Acı Anım Günü ilə bağlı seminarda tarixi hadisələrin gələcəyə daşınmasında, eləcə də Azərbaycan tarixində mühüm hadisənin xatırlanmasında muzeylərin əhəmiyyəti vurğulanıb. Bu cür seminarların təşkili tarixi hadisələri daha yaxından tanımaq, gələcəkdə oxşar kədərli hadisələrin yaşanmaması üçün maarifləndirmə baxımından böyük əhəmiyyət kəsb edir. <br><br>
            <a href="https://mod.gov.az/az/20-yanvar-faciesi-414/" target="_blank"><button class="page2btn" align="center"> 20 yanvar haqqında məlumat almaq </button></a>
            <a href="https://www.instagram.com/tv/CY61-M1vVDY/?utm_source=ig_web_copy_link" target="_blank"> <button class="page2btn"> 20 yanvar mövzusunda video <br> rolikə baxmaq </button></a>
         </div>
      </div>
 </section>
 <!--section box4 page4 tasarım-->
-<section class="box4page4">
-    
-    <div class="box4-img" >
-        <div align="center" style="background-image: url('https://r.resimlink.com/ZWQIyrGnz.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/awxdWugS.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/kF1lZjeJ6z8.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/XtoZxAbW.jpg');"></div> <br><br>
-     </div> 
+<section class="box4page4" id="box4page4">
     <div class="box4-text">
-          <h2> Muzeyimizə dəvət etdiyimiz <span> qonaqlar </span> </h2> <br><br>
+          <h2 align="center"> Muzeyimizə dəvət etdiyimiz <span> qonaqlar </span> </h2> <br><br>
           <div class="box" align="center">
             <h3 align="center"> Vüqar İskəndərov </h3>
              Bu yaxınlarda muzeydə gənclərlə görüşən  Vüqar İskəndərov gənclərə unudulmaz seminar keçirdi. Seminarda gənclərlə ünsiyyətdə olan Vüqar İskəndərov öz həyatından təcrübələrini və ilhamverici hekayələrini bölüşdü. Gənclər onunla söhbət edib, suallarını verib, fikirlərini bölüşüblər. <br><br>
@@ -2663,17 +3235,16 @@ Sonda muzeyimizdə keçirilən 20 Yanvar Acı Anım Günü ilə bağlı seminard
             <a href="https://www.instagram.com/p/CbhYwXtAD6s/?utm_source=ig_web_copy_link" target="_blank"> <button class="page4btn"> Vüqar İskəndərovun gənclərlə görüşünə dair video <br> rolikə baxmaq </button></a>
         </div>
     </div>
+    <div class="box4-img" >
+        <div align="center" style="background-image: url('https://r.resimlink.com/ZWQIyrGnz.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/awxdWugS.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/kF1lZjeJ6z8.jpg');"></div> 
+        <div align="center" style="background-image: url('https://r.resimlink.com/XtoZxAbW.jpg');"></div> <br><br>
+     </div> 
 </section>          
 
 <!--section box4-2page4 tasarım-->
 <section class="box4-2page4">
-    
-    <div class="box4-img" >
-        <div align="center" style="background-image: url('https://r.resimlink.com/zOH1KhAr-0if.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/e-RMFzfKVa.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/-F2d7_xwb.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/14QsZ_AJB.jpg');"></div> <br><br>
-     </div> 
     <div class="box4-text"><br><br>
           <div class="box" align="center">
              <h3 align="center"> Zaur Orucov </h3>
@@ -2683,22 +3254,21 @@ Sonda muzeyimizdə keçirilən 20 Yanvar Acı Anım Günü ilə bağlı seminard
 
              Seminarda ebru sənətinin vizual və estetik zənginliyi də üzə çıxıb. Vurğulanıb ki, ebru sənəti təbii materiallardan və incə sənətkarlıqla hazırlanmış sənətdir. İştirakçılar ebru sənətinin rəng və formaların rəqsi kimi təsirə malik olduğunu və bu sənətin tamaşaçılara təkcə vizual deyil, həm də emosional təsir göstərdiyini görüblər. <br><br>
 
-        Muzeyin təşkil etdiyi bu seminar türk mədəniyyətində ebru sənətinin əhəmiyyətinə diqqət çəkib və bu sənətin gələcək nəsillərə ötürülməsinə töhfə verib. Seminarın tətbiqi ebru şousu ilə iştirakçıların bu sənətə marağı artsa da, Zaur Orucovun ebru sənəti ilə bağlı təcrübəsi və biliyi də sənətsevərlərin rəğbətini qazanıb. <br><br>
+             Muzeyin təşkil etdiyi bu seminar türk mədəniyyətində ebru sənətinin əhəmiyyətinə diqqət çəkib və bu sənətin gələcək nəsillərə ötürülməsinə töhfə verib. Seminarın tətbiqi ebru şousu ilə iştirakçıların bu sənətə marağı artsa da, Zaur Orucovun ebru sənəti ilə bağlı təcrübəsi və biliyi də sənətsevərlərin rəğbətini qazanıb. <br><br>
             <a href="https://az.trend.az/azerbaijan/society/3527063.html" target="_blank"><button class="page4-2btn" align="center"> Zaur Orucov tədbiri haqqında məlumat almaq </button></a>
             <a href="https://www.instagram.com/p/CXT-R3xrkw5/?utm_source=ig_web_copy_link" target="_blank"> <button class="page4-2btn"> Zaur Orucovun tədbirinə dair video <br> rolikə baxmaq </button></a>
         </div>
     </div>
+    <div class="box4-img" >
+        <div align="center" style="background-image: url('https://r.resimlink.com/zOH1KhAr-0if.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/e-RMFzfKVa.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/-F2d7_xwb.jpg');"></div> 
+        <div align="center" style="background-image: url('https://r.resimlink.com/14QsZ_AJB.jpg');"></div> <br><br>
+     </div>
 </section>          
 
 <!--section box4-3page4 tasarım-->
 <section class="box4-3page4">
-    
-    <div class="box4-img" >
-        <div align="center" style="background-image: url('https://r.resimlink.com/PzOhHsC6.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/KLutnzixDp.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/PzOhHsC6.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/KLutnzixDp.jpg');"></div> <br><br>
-     </div> 
     <div class="box4-text"><br><br>
           <div class="box" align="center">
              <h3 align="center"> Zahid Vələdov </h3>
@@ -2713,13 +3283,26 @@ Sonda muzeyimizdə keçirilən 20 Yanvar Acı Anım Günü ilə bağlı seminard
             <a href="https://www.instagram.com/p/CbZjFBhvcQl/?utm_source=ig_web_copy_link" target="_blank"> <button class="page4-3btn"> Zahid Vələdovun tədbirinə dair video <br> rolikə baxmaq </button></a>
         </div>
     </div>
+    <div class="box5-img" >
+        <div align="center" style="background-image: url('https://r.resimlink.com/PzOhHsC6.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/KLutnzixDp.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/DiCcqx.jpg');"></div> 
+        <div align="center" style="background-image: url('https://r.resimlink.com/q3xwALcPXS.jpg');"></div> <br><br>
+     </div> 
 </section>  
 
 <!--section box5 page5 tasarım-->
-<section class="box5page5">
-     <div class="box5-text">
-          <h2> Muzeyimizdə <span>milli bayramlarımız</span> qeyd olunur</h2> <br><br>
-          <div class="box">
+<section class="box5page5" id="box5page5">
+   
+    <div class="box4-img" >
+        <div align="center" style="background-image: url('https://r.resimlink.com/GSvoE9Q-.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/X7-90KGbW.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/4fkemITF9pOY.jpg');"></div> 
+        <div align="center" style="background-image: url('https://r.resimlink.com/WxLpHn.jpg');"></div> <br><br>
+     </div> 
+    <div class="box4-text"><br><br>
+        <h2 align="center">Muzeyimizdə milli bayramlarımız <span> qeyd olunur </span> </h2><br><br>
+          <div class="box" align="center">
              <h3 align="center"> Novruz Bayramı </h3>
              Novruz bayramı hər il olduğu kimi muzeyimizdə də coşqu ilə qeyd olundu. Novruz yazın və yeniləşmənin başlanğıcını simvolizə edən, Azərbaycan mədəniyyətində mühüm yer tutan ənənəvi bayramdır. Muzeyimizdə keçirilən bayram şənliklərinə yerli və xarici turistlər böyük maraq göstərdilər. <br><br>
 
@@ -2730,145 +3313,172 @@ Sonda muzeyimizdə keçirilən 20 Yanvar Acı Anım Günü ilə bağlı seminard
              Novruz şənliyi muzeyimizin yerli və xarici turistlərinin Azərbaycan mədəniyyətini daha yaxından tanımaq imkanı qazandığı bir tədbir oldu. Muzey işçiləri arasında da həmrəylik, birlik hiss olunurdu. Bayram şənliklərinin sonunda turistlər və əməkdaşlar birlikdə xatirə şəkli çəkdirərək Novruz bayramına xüsusi anlar yaşatdılar. <br><br>
              
              Muzeyimizdə qeyd olunan Novruz bayramı xarici turistlərə Azərbaycanın mədəniyyəti və adət-ənənələri haqqında mühüm məlumatlar verməklə yanaşı, eyni zamanda yerli turistlərdə birlik və həmrəylik hisslərini daha da gücləndirdi. Bu tədbirin hər il muzeyimizdə ənənəvi olaraq qeyd olunması bundan sonra da yerli və xarici turistlər üçün xoş təcrübə olacaqdır. <br><br>
-            <a href="https://www.facebook.com/belebeleishler/videos/%C5%9F%C9%99kinin-31-ya%C5%9Fl%C4%B1-tar-ustas%C4%B1-zahid-v%C9%99l%C9%99dov/2466622046907703/" target="_blank"><button class="page5btn" align="center"> Novruz bayramı haqqında məlumat almaq </button></a>
-            <a href="https://www.instagram.com/p/CbZjFBhvcQl/?utm_source=ig_web_copy_link" target="_blank"> <button class="page5btn"> Novruz bayramı tədbirinə dair video <br> rolikə baxmaq </button></a>
+            <a href="https://az.wikipedia.org/wiki/Novruz_bayram%C4%B1" target="_blank"><button class="page5btn" align="center"> Novruz bayramı haqqında məlumat almaq </button></a>
+            <a href="https://www.instagram.com/p/CbXAgRxuBO8/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"><button class="page5btn" align="center"> Novruz bayramı tədbirinə dair  <br> paylaşımlara baxmaq </button></a>
         </div>
-     </div>
-     <div class="box2-img" >
-        <div align="center" style="background-image: url('https://r.resimlink.com/GSvoE9Q-.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/X7-90KGbW.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/4fkemITF9pOY.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/WxLpHn.jpg');"></div> <br><br> 
-     </div> 
-</section>
+    </div>
+</section> 
 
 
 <!--section box6 page6 tasarim-->
-<section class="box6page6">
-    <div class="box6-img" >
-        <div align="center" style="background-image: url('https://r.resimlink.com/GSvoE9Q-.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/X7-90KGbW.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/4fkemITF9pOY.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/WxLpHn.jpg');"></div> <br><br> 
-     </div> 
+<section class="box6page6" id="box6page6"> 
     <div class="box6-text">
-           <h2>Muzeyimizdə <span>regional yarışlar </span> keçirilməkdədir</h2> <br> <br>
-           <div class="box">
-              <h3 align="center"> Şahmat Yarışı </h3>
-              Muzeyimizdə məktəblilər arasında şahmat turniri təşkil olunub. Turnir muzeyimizdəki bir çox tələbə klubları arasında tədbir idi və turnirdə bir çox məktəblərin şagirdləri iştirak edirdi. <br><br>
+           <h2 align="center">Muzeyimizdə <span>regional yarışlar </span> keçirilməkdədir</h2> <br> <br>
+           <div class="box" align="center">
+              <h3 align="center">"8 Noyabr Zəfər günü" münasibətilə Viktorina </h3>
+              Muzeyimizdə “8 Noyabr Qələbə Günü” adı altında məktəbli uşaqlarla birlikdə keçirdiyimiz vətənpərvər Viktoriya tədbiri keçirildi. 🎉
 
-              Turnirin keçirilməsində məqsəd şahmat üzrə şagirdlərin həyatında mühüm rol oynayan strateji təfəkkür, problem həll etmə, konsentrasiya və analitik bacarıqların inkişaf etdirilməsi olub. Eyni zamanda, tələbələrin bir-biri ilə rəqabət aparması, bir-birindən öyrənməsi və yeni dostluqlar qurması məqsədəuyğundur. <br><br>
+              Bu əlamətdar gün Azərbaycanın müstəqillik mübarizəsində qələbəsini qeyd etmək və vətənpərvərlik hisslərini yaşatmaq məqsədilə təşkil edilib. Tədbir zamanı uşaqlara ölkəmizin tarixi, qəhrəmanlarımız haqqında əyləncəli suallar verilib. Onlar da bir-biri ilə yarışaraq bilik və vətənpərvərlik dolu təcrübə qazandılar. <br><br>
               
-              Turnir zamanı tələbələr müxtəlif səviyyəli rəqiblərlə qarşılaşıblar. Bəziləri üçün turnir şahmatda ilk təcrübələri idi, bəziləri isə əvvəllər turnirlərdə iştirak etmişdilər. Bununla belə, hər kəs şahmatın çətinliyi və həzzi ilə qarşılaşırdı. <br><br>
+              “8 Noyabr Qələbə Günü”  həsr olunmuş bu tədbir gələcəyimizin qarantı olan uşaqlarımıza vətənpərvərlik hisslərini aşılamaq məqsədi daşıyırdı. Ölkəmizin müstəqilliyi və azadlığı uğrunda mübarizə aparan qəhrəmanlarımızın şücaətindən, fədakarlığından və əzmkarlığından danışaraq milli dəyərlərimizə sadiqliyimizi gücləndirməyi qarşımıza məqsəd qoymuşuq. <br><br>
               
-              Turnirin sonunda I, II və III yerləri tutan tələbələr mükafatlandırılmış və bütün iştirakçılara iştirak sertifikatları verilmişdir. Tələbələrin üzündəki təbəssüm, qazanılan dostluqlar bu tədbirin nə qədər əhəmiyyətli olduğunu göstərdi. <br><br>
+              Bu gözəl tədbirin təşkilində əməyi olan hər kəsə təşəkkürümü bildirirəm. Müəllimlərimiz, muzey işçilərimiz və əlbəttə ki, tələbələrimiz bu tədbirin unudulmaz təcrübəyə çevrilməsi üçün çox səy göstərdilər. Biz onlarla fəxr edirik! 🙌 <br><br>
               
-              Muzeyimiz tələbələrə müxtəlif istedad və maraqları kəşf etməyə imkan verən bir çox fəaliyyətlərə ev sahibliyi edir. Bu cür turnirlər tələbələrə özlərini inkişaf etdirmək və yeni bacarıqlar öyrənmək üçün əla fürsət yaradır. <br><br>
-              <a href="https://www.facebook.com/belebeleishler/videos/%C5%9F%C9%99kinin-31-ya%C5%9Fl%C4%B1-tar-ustas%C4%B1-zahid-v%C9%99l%C9%99dov/2466622046907703/" target="_blank"><button class="page4-3btn" align="center"> Şahmat yarışı haqqında məlumat almaq </button></a>
-             <a href="https://www.instagram.com/p/CbZjFBhvcQl/?utm_source=ig_web_copy_link" target="_blank"> <button class="page4-3btn"> Şahmat yarışına dair video <br> rolikə baxmaq </button></a>
+              Unutmayaq ki, övladlarımız ölkəmizin gələcəyidir. Onları vətənpərvərlik, milli dəyərlərimiz haqqında məlumatlandıraraq vətənpərvər, məsuliyyətli şəxsiyyət kimi yetişdirmək bizim borcumuzdur. <br><br>
+              <a href="https://az.wikipedia.org/wiki/Z%C9%99f%C9%99r_G%C3%BCn%C3%BC_(Az%C9%99rbaycan)" target="_blank"><button class="page6btn" align="center"> 8 Noyabr Zəfər günü haqqında məlumat almaq </button></a>
+             <a href="https://www.instagram.com/p/CV4kCTjv95s/?utm_source=ig_web_copy_link&igshid=MmJiY2I4NDBkZg==" target="_blank"> <button class="page6btn"> Viktorinaya dair video <br> rolikə baxmaq </button></a>
         </div>
     </div>
+    <div class="box6-img" >
+        <div align="center" style="background-image: url('https://r.resimlink.com/OLN_yoJUVRv.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/l-6a7V2pDThF.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/3XUro.jpg');"></div> 
+        <div align="center" style="background-image: url('https://r.resimlink.com/Spgo0D9xWPJ.jpg');"></div> <br><br> 
+     </div> 
 </section>
 
+<!--section bo6-2page6 tasarim-->
+<section class="box6-2page6" id="box6-2page6">
+    <div class="box6-2text">
+       <br><br>
+        <div class="box" align="center">
+           <h3 align="center"> Şahmat Yarışı </h3>
+             Muzeyimizdə məktəblilər arasında şahmat turniri təşkil olunub. Turnir muzeyimizdəki bir çox tələbə klubları arasında tədbir idi və turnirdə bir çox məktəblərin şagirdləri iştirak edirdi. <br><br>
+
+             Turnirin keçirilməsində məqsəd şahmat üzrə şagirdlərin həyatında mühüm rol oynayan strateji təfəkkür, problem həll etmə, konsentrasiya və analitik bacarıqların inkişaf etdirilməsi olub. Eyni zamanda, tələbələrin bir-biri ilə rəqabət aparması, bir-birindən öyrənməsi və yeni dostluqlar qurması məqsədəuyğundur. <br><br>
+           
+             Turnir zamanı tələbələr müxtəlif səviyyəli rəqiblərlə qarşılaşıblar. Bəziləri üçün turnir şahmatda ilk təcrübələri idi, bəziləri isə əvvəllər turnirlərdə iştirak etmişdilər. Bununla belə, hər kəs şahmatın çətinliyi və həzzi ilə qarşılaşırdı. <br><br>
+           
+             Turnirin sonunda I, II və III yerləri tutan tələbələr mükafatlandırılmış və bütün iştirakçılara iştirak sertifikatları verilmişdir. Tələbələrin üzündəki təbəssüm, qazanılan dostluqlar bu tədbirin nə qədər əhəmiyyətli olduğunu göstərdi. <br><br>
+           
+             Muzeyimiz tələbələrə müxtəlif istedad və maraqları kəşf etməyə imkan verən bir çox fəaliyyətlərə ev sahibliyi edir. Bu cür turnirlər tələbələrə özlərini inkişaf etdirmək və yeni bacarıqlar öyrənmək üçün əla fürsət yaradır. <br><br>
+           <a href="https://az.wikipedia.org/wiki/%C5%9Eahmat" target="_blank"><button class="page6-2btn" align="center"> Şahmat yarışı haqqında məlumat almaq </button></a>
+          <a href="https://www.instagram.com/p/CYTP07KDBby/?utm_source=ig_web_copy_link&igshid=MmJiY2I4NDBkZg==" target="_blank"> <button class="page6-2btn"> Şahmat yarışına dair video <br> rolikə baxmaq </button></a>
+        </div>
+    </div>
+    <div class="box6-2img">
+        <div align="center" style="background-image: url('https://r.resimlink.com/vyWBLGdgzeHX.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/5KjIWY.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/gtJiF.jpg');"></div> 
+        <div align="center" style="background-image: url('https://r.resimlink.com/Oq2EVen1T.jpg');"></div> <br><br> 
+    </div>
+</section>
 <!--section box7 page7 tasarim-->
-<section class="box7page7">
+<section class="box7page7" id="box7page7">
+    <div class="box7-img">
+        <div align="center" style="background-image: url('https://r.resimlink.com/WVvY9.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/GxonS9VrD.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/DAyImO.jpg');"></div> 
+        <div align="center" style="background-image: url('https://r.resimlink.com/N9D2X.jpg');"></div> <br><br> 
+    </div>
     <div class="box7-text">
-          <h2>Muzeyimizdə <span>dövlət orqanları </span> ilə seminarlar keçirilməkdədir</h2> <br><br>
-          <div class="box"> Şəki Tarix-Diyarşünasliq Muzeyi 1925-ci ilin sentyabr ayında yaradılmışdır.
-            Muzeydə Şəki şəhərinin tarixini, mədəniyyətini, qədim sənət növlərini, etnoqrafiyasını, mətbəxini əks etdirən 5000-dən çox eksponat nümayiş etdirilir. Bunlardan 3000-ə yaxını ekspozisiya zallarında nümayiş etdirilir.Eyni zamanda Böyük vətən müharibəsi (1941-1945-ci illər), Əfqanıstan və Qarabağ müharibələrində şəkililərin şücaətini dair stendlər quraşdırılmışdır.
-            Müxtəlif illərdə müxtəlif binalarda yerləşən R.Əfəndiyev adına Şəki Tarix-Diyarşünaslıq Muzeyi hazırda Şəkinin səfalı bir guşəsində - Qala Divarları arasında olan binada yerləşib. 
+        <h2 align="center">Muzeyimizdə <span>milli adət və ənənələrin</span> yaşadılması üçün tədbirlər keçirlməkdədir</h2><br><br>
+         <div class="box" align="center">
+            <h3 align="center"> Xına mərasimi </h3>
+            Azərbaycan qedim milli adet ənənələrinə sadiq bir xalqdır.Tarixən Azerbaycan toy ənənəsi evlenmə merasiminin butun merhelelerini qız bəyənmə,elcilik,nişan,toy şənlikləri və gənc ailənin toydan sonrakı həyatının bezi məqamlarini əhatə edir. <br><br>
+            Toy kəlməsi həmin mərasimlə əlaqədar dūzəldilən şənlik,şadlıq məclisi kimi izah edilir. Toy şənliklərindən biri də oğlan toyundan bir gun qabaq qiz evində keçirilən şənlik mərasimi idi.Qız evində olan sonuncu toy şənliyi Azerbaycanın ekser bölgələrində xınayaxdı kimi təşkil edilir. <br><br>
+            Həmin xınayaxdı mərasimi Seki Tarix Diyarşūnaslıq muzeyinin əməkdaşlarının təşəbbūsū ilə təşkil edilmişdir.Her iki valideyinini itirmiş ,Uşaq evində böyüyən və tərbiyə alan Vūsal ve Turanenin xınayaxdı məclisi təşkil edilmişdir. <br><br>
+             Xınayaxdının aparıcısı Kəmalə xanım hər iki cütlüyə adət ənənəni - hağışta,rəqslər və s təqdim etdi.Muzey kollektivi və dəvət olunmuş qonaqlar məlisin şən, gözəl kecməsi ūçūn vacib olan butun mərasimləri yerinə gətirdiler. <br><br>
+              Muzeyin direktoru Vuqar Mustafayev hər iki cūtlūyū təbrik etdi, onlara həyatin enişli yoxuşlu yollarinda büdrəməməyi, gözəl  ailə seadəti,həyat yollarında birgə addimlamağı arzuladı. Gənclərə hədiyyəler təqdim olundu. Her iki cütlük Azərbaycanın birinci xanımı Mehriban Əliyeva tərəfindən evlə təmin olunmuşdur. <br><br>
+            <a href="https://az.wikipedia.org/wiki/X%C4%B1nayaxd%C4%B1" target="_blank"><button class="page7btn" align="center"> Xınayaxdı mərasimi haqqında məlumat almaq </button></a>
+           <a href="https://www.instagram.com/p/Cbsxp8BDpar/" target="_blank"> <button class="page7btn"> Xınayaxdı mərasiminə dair video <br> rolikə baxmaq </button></a>
          </div>
-    </div>
-    <div class="box7-img" >
-        <img  src="https://r.resimlink.com/EQPzf.jpg"  > <br><br> 
      </div>
 </section>
-
 <!--section box8 page8 tasarim-->
-<section class="box8page8">
-    <div class="box8-img" >
-        <div style="background-image: url('https://r.resimlink.com/x8H9_vw5n0uQ.jpg');"></div>
-         <div style="background-image: url('https://r.resimlink.com/x8H9_vw5n0uQ.jpg');"></div>
-         <div style="background-image: url('https://r.resimlink.com/x8H9_vw5n0uQ.jpg');"></div> <br><br> 
-     </div>
+<section class="box8page8" id="box8page8id">
     <div class="box8-text">
-          <h2>Muzeyimizdə <span>zərərli vərdişələr</span> əleyhinə seminarlar keçirilməkdədir</h2> <br><br>
-          <div class="box">Şəki Tarix-Diyarşünasliq Muzeyi 1925-ci ilin sentyabr ayında yaradılmışdır.
-            Muzeydə Şəki şəhərinin tarixini, mədəniyyətini, qədim sənət növlərini, etnoqrafiyasını, mətbəxini əks etdirən 5000-dən çox eksponat nümayiş etdirilir. Bunlardan 3000-ə yaxını ekspozisiya zallarında nümayiş etdirilir.Eyni zamanda Böyük vətən müharibəsi (1941-1945-ci illər), Əfqanıstan və Qarabağ müharibələrində şəkililərin şücaətini dair stendlər quraşdırılmışdır.
-            Müxtəlif illərdə müxtəlif binalarda yerləşən R.Əfəndiyev adına Şəki Tarix-Diyarşünaslıq Muzeyi hazırda Şəkinin səfalı bir guşəsində - Qala Divarları arasında olan binada yerləşib. 
+        <br><br>
+        <h2 align="center">Muzeyimizdə <span> zərərli vərdişələr </span> əleyhinə seminarlar keçirilməkdədir</h2> <br><br>
+         <div class="box" align="center">
+            <h3 align="center"> Zərərli vərdişələr əleyhinə seminar </h3>
+             Muzeyimizdə məktəblilər arasında şahmat turniri təşkil olunub. Turnir muzeyimizdəki bir çox tələbə klubları arasında tədbir idi və turnirdə bir çox məktəblərin şagirdləri iştirak edirdi. <br><br>
+ 
+             Turnirin keçirilməsində məqsəd şahmat üzrə şagirdlərin həyatında mühüm rol oynayan strateji təfəkkür, problem həll etmə, konsentrasiya və analitik bacarıqların inkişaf etdirilməsi olub. Eyni zamanda, tələbələrin bir-biri ilə rəqabət aparması, bir-birindən öyrənməsi və yeni dostluqlar qurması məqsədəuyğundur. <br><br>
+            
+             Turnir zamanı tələbələr müxtəlif səviyyəli rəqiblərlə qarşılaşıblar. Bəziləri üçün turnir şahmatda ilk təcrübələri idi, bəziləri isə əvvəllər turnirlərdə iştirak etmişdilər. Bununla belə, hər kəs şahmatın çətinliyi və həzzi ilə qarşılaşırdı. <br><br>
+            
+             Turnirin sonunda I, II və III yerləri tutan tələbələr mükafatlandırılmış və bütün iştirakçılara iştirak sertifikatları verilmişdir. Tələbələrin üzündəki təbəssüm, qazanılan dostluqlar bu tədbirin nə qədər əhəmiyyətli olduğunu göstərdi. <br><br>
+            
+             Muzeyimiz tələbələrə müxtəlif istedad və maraqları kəşf etməyə imkan verən bir çox fəaliyyətlərə ev sahibliyi edir. Bu cür turnirlər tələbələrə özlərini inkişaf etdirmək və yeni bacarıqlar öyrənmək üçün əla fürsət yaradır. <br><br>
+            <a href="https://www.kaspi.az/az/zererli-verdisler-beyin-xesteliyidir-arasdirma" target="_blank"><button class="page8btn" align="center"> Xına haqqında məlumat almaq </button></a>
+           <a href="https://www.facebook.com/153173078372486/posts/1553944994961947/?mibextid=rS40aB7S9Ucbxw6v" target="_blank"> <button class="page8btn"> Xınaya dair video <br> rolikə baxmaq </button></a>
          </div>
+     </div>
+     <div class="box8-img">
+        <div align="center" style="background-image: url('https://r.resimlink.com/erv1PmF.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/DF-CJI5u.jpg');"></div>
+        <div align="center" style="background-image: url('https://r.resimlink.com/dmNF9O.jpg');"></div> 
+        <div align="center" style="background-image: url('https://r.resimlink.com/EmA_gxOn.jpg');"></div> <br><br> 
     </div>
 </section>
-<section class="galeri">
-    <div class="galeri1">
-         <div style="background-image: url('https://r.resimlink.com/x8H9_vw5n0uQ.jpg');"></div>
-         <div style="background-image: url('https://r.resimlink.com/x8H9_vw5n0uQ.jpg');"></div>
-         <div style="background-image: url('https://r.resimlink.com/x8H9_vw5n0uQ.jpg');"></div>
-    </div>
-  </section>
- <!---portfolio section design-->
-<section class="portfolio" id="portfolio">
-    <div class="main-text">  
-        <h2><span>Sonuncu </span>  Layihələrim </h2>     
-    </div>
-    <div class="portfolio-content">
-        <div class="row">
-            <img src="https://r.resimlink.com/-_GAZT.jpg" >
-            <div class="layer">
-                <h5> Yenilikci proje </h5>
-                <p>Haqqında</p>
-                <a href="#"><i class='bx bx-link-external'></i></a>
-            </div>
-        </div>
 
-        <div class="row">
-            <img src="https://r.resimlink.com/yMNoRxH.jpg" >
-            <div class="layer">
-                <h5> Yenilikci proje </h5>
-                <p>Haqqında</p>
-                <a href="#"><i class='bx bx-link-external'></i></a>
-            </div>
-        </div>
-
-        <div class="row">
-            <img src="https://r.resimlink.com/x8H9_vw5n0uQ.jpg" >
-            <div class="layer">
-                <h5> Yenilikci proje </h5>
-                <p>Haqqında</p>
-                <a href="#"><i class='bx bx-link-external'></i></a>
-            </div>
-        </div>
-    </div>
-</section>
-<!---portfolio section design-->
+<!---contact section design-->
 
 <section class="contact" id="contact">
-     <div class="contact-text">
-         <h2>Mənimlə <span> əlaqə qurmaq üçün</span></h2>
-         <p>Dövlət turizm əməkdaşı</p>
-         <div class="list">
-            <li><a href="#">+994703530503</a></li>
-            <li><a href="#">vugar533@gmail.com</a></li>
-            <li><a href="#">Hər kəslə paylaşmağı unutma</a></li>
-         </div>
+    <div class="contact-text" align="center"> 
+        <h2>Mənimlə <span> əlaqə qurmaq üçün</span></h2>
+        <p> DTA əməkdaşı</p>
+        <div class="list" align="center">
+            <ul> <!-- Liste etiketi kullanılmalı -->
+                <li><a href="tel:+994703530503">+994703530503</a></li> <!-- Telefon numarası linki düzenlendi -->
+                <li><a href="mailto:vugar.mustafayev@tourism.gov.az">vugar.mustafayev@tourism.gov.az</a></li> <!-- E-posta linki düzenlendi -->
+                <li><a href="#">Hər kəslə paylaşmağı unutma</a></li>
+            </ul>
+        </div>
 
-         <div class="contact-icons">
-             <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
-             <a href="https://instagram.com/0omarmustafa0?igshid=ZDdkNTZiNTM="><i class='bx bxl-instagram' ></i></a>
-             <a href="#"><i class='bx bxl-twitter' ></i></a>
-             <a href="#"><i class='bx bxl-youtube' ></i></a>
-         </div>  
-     </div>
+        <div class="contact-icons" align="center">
+            <a target="_blank" href="https://www.facebook.com/vugar.mustafayev.9?mibextid=ZbWKwL" ><i class='bx bxl-facebook-circle'></i></a> <!-- Facebook linki düzenlendi -->
+            <a target="_blank" href="https://www.instagram.com/vugar533/"><i class='bx bxl-instagram'></i></a>
+            <a href="#" onclick="showAlert()"><i class='bx bxl-twitter'></i></a>
+            <a href="#" onclick="showAlert()"><i class='bx bxl-youtube'></i></a>
+        </div> 
+        
+    </div>
 </section>
 
+<!-- harita tanitim section design-->
+
+<section class="harita-tanitim">
+    <div class="tanitim">
+
+        <h2> <span> Muzeyin yerləşdiyi yer: </span></h2>
+      <p>Mədəni sərvətlərin izində gəzmək </p>
+      <p>Muzeyimizi ziyarət etməyi unutma, bu sənin üçün əvəzolunmaz olacaq </p>
+    </div>
+    <div class="harita">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.83012465072!2d47.195699999999995!3d41.203677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404787e7360547a5%3A0x9948bfee280b1bdc!2sMuseum%20Of%20History%2C%20Ethnography%20And%20Local%20Lore!5e0!3m2!1str!2saz!4v1684770627779!5m2!1str!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <br>
+        <div class="contact-icons">
+            <a href="https://www.facebook.com/profile.php?id=100057601893437&mibextid=ZbWKwL" target="_blank""><i class='bx bxl-facebook-circle' ></i></a>
+            <a target="_blank" href="https://instagram.com/shekitarixdiyarshunasliqmuzeyi?igshid=MmJiY2I4NDBkZg==" target="_blank"><i class='bx bxl-instagram' ></i></a>
+            <a href="#" onclick="showAlert()"><i class='bx bxl-twitter' ></i></a>
+            <a href="#" onclick="showAlert()"><i class='bx bxl-youtube' ></i></a>
+        </div>  
+    </div>
+  </section>
+  
 <!---end section design-->
 
 <section class="end">
-   <div class="last-text">
-       <p>Tüm Haqları Vüqar Mustafayevə aiddir.Bütün haqları © 2023 qorunur</p>
+   <div class="last-text" align="center">
+       <p>Tüm Hakları Vüqar Mustafayev'e aittir. Tüm hakları saklıdır © 2023.</p>
+       <p align="center"> Bu site, TekÇip firması tarafından kurulmuş olup tüm hakları korunmaktadır. </p>
+       <br>
+       <a class="pagebtn0" href="https://www.vugarmustafayev.com/" Target="_blank">tekçip.com</a>
    </div>
    <div class="top">
-         <a href="#home"><i class='bx bx-up-arrow-alt' ></i></a>
+         <a href="#home" class="page9btn"><i class='bx bx-up-arrow-alt' ></i>   Ana ekrana Dön</a>      
    </div>
 </section>  
 </body>
