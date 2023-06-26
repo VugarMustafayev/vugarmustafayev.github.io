@@ -3,23 +3,23 @@
 <head>
  <style>
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-    text-decoration: none;
-    list-style: none;
-    scroll-behavior:  smooth;
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins',sans-serif;
+     text-decoration: none;
+     list-style: none;
+     scroll-behavior:  smooth;
 }
 :root{
-    --bg-color: #2a2a2a;
-    --second-bg-color: #202020;
-    --text-color:#fff;
-    --second-color:#ccc;
-    --main-color: rgb(210 105 30) 	;
-    --big-font: 5rem;
-    --h2-font: 3rem;
-    --p-font: 1.1rem;
+     --bg-color: #2a2a2a;
+     --second-bg-color: #202020;
+     --text-color:#fff;
+     --second-color:#ccc;
+     --main-color: rgb(210 105 30) 	;
+     --big-font: 5rem;
+     --h2-font: 3rem;
+     --p-font: 1.1rem;
 }
 @keyframes brightnessAnimation{
     0%{        
@@ -50,483 +50,462 @@
   }
 }
 body{
-    background: linear-gradient(to bottom, #1a1a1a, #333333);
-    color: var(--text-color);
+     background: linear-gradient(to bottom, #1a1a1a, #333333);
+     color: var(--text-color);
 }
 header{
-    position: fixed;
-    width: 96%;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: transparent;
-    padding: 22px 15%; 
-    border-bottom: 1px solid transparent;
-    transition: all .45s ease;
+     position: fixed;
+     width: 96%;
+     top: 0;
+     right: 0;
+     z-index: 1000;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background: transparent;
+     padding: 22px 15%; 
+     border-bottom: 1px solid transparent;
+     transition: all .45s ease;
 }
 .logo{
-    color: var(--text-color);
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 1px;
+     color: var(--text-color);
+     font-size: 35px;
+     font-weight: 700;
+     letter-spacing: 1px;
 }
 span{
-    color: var(--main-color);
+     color: var(--main-color);
 }
 .navlist{
-    display: flex;
+     display: flex;
 }
 .navlist a{
-    color: var(--text-color);
-    font-size: 17px;
-    font-weight: 500;
-    margin: 0 25px;
-    transition: all .45s ease;
+     color: var(--text-color);
+     font-size: 17px;
+     font-weight: 500;
+     margin: 0 25px;
+     transition: all .45s ease;
 }
 .navlist a:hover{
-color: var(--main-color);
+     color: var(--main-color);
 }
 .navlist a.active{
-    color: var(--text-color);
+     color: var(--text-color);
 }
 #menu {
-  z-index: 2;
+     z-index: 2;
 }
-
 #menu-bar {
-  width: 45px;
-  height: 40px;
-  margin: 30px 0 20px 20px;
-  cursor: pointer;
+     width: 45px;
+     height: 40px;
+     margin: 30px 0 20px 20px;
+     cursor: pointer;
 }
-
 .bar {
-  height: 5px;
-  width: 100%;
-  background-color: #DC052D;
-  display: block;
-  border-radius: 5px;
-  transition: 0.3s ease;
+     height: 5px;
+     width: 100%;
+     background-color: #DC052D;
+     display: block;
+     border-radius: 5px;
+     transition: 0.3s ease;
 }
-
 #bar1 {
-  transform: translateY(-4px);
+     transform: translateY(-4px);
 }
-
 #bar3 {
-  transform: translateY(4px);
+     transform: translateY(4px);
 }
-
 .nav {
-  transition: 0.3s ease;
-  display: none;
+     transition: 0.3s ease;
+     display: none;
 }
-
 .nav ul {
-  padding: 0 22px;
+     padding: 0 22px;
 }
-
 .nav li {
-  list-style: none;
-  padding: 12px 0;
+     list-style: none;
+     padding: 12px 0;
 }
-
 .nav li a {
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
+     color: white;
+     font-size: 20px;
+     text-decoration: none;
 }
-
 .nav li a:hover {
-  font-weight: bold;
+     font-weight: bold;
 }
-
 .menu-bg, #menu {
-  top: 0;
-  left: 0;
-  position: absolute;
+     top: 0;
+     left: 0;
+     position: absolute;
 }
-
 .menu-bg {
-  z-index: 1;
-  width: 0;
-  height: 0;
-  margin: 30px 0 20px 20px;
-  background: radial-gradient(circle, #DC052D, #DC052D);
-  border-radius: 50%;
-  transition: 0.3s ease;
+     z-index: 1;
+     width: 0;
+     height: 0;
+     margin: 30px 0 20px 20px;
+     background: radial-gradient(circle, #DC052D, #DC052D);
+     border-radius: 50%;
+     transition: 0.3s ease;
 }
-
 .change {
-  display: block;
-}
-
+     display: block;
+} 
 .change .bar {
-  background-color: white;
+     background-color: white;
 }
-
 .change #bar1 {
-  transform: translateY(4px) rotateZ(-45deg);
+     transform: translateY(4px) rotateZ(-45deg);
 }
-
 .change #bar2 {
-  opacity: 0;
+     opacity: 0;
 }
-
 .change #bar3 {
-  transform: translateY(-6px) rotateZ(45deg);
+     transform: translateY(-6px) rotateZ(45deg);
 }
-
 .change-bg {
-  width: 520px;
-  height: 460px;
-  transform: translate(-60%,-30%);
+      width: 520px;
+      height: 460px;
+      transform: translate(-60%,-30%);
 }
 
 section{
-    padding: 160px 15% 120px;
-}
+     padding: 160px 15% 120px;
+} 
 .home{
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-color: black;
-    background-image: url("https://r.resimlink.com/AHxCBQnV.gif");
-    background-position: center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+     position: relative;
+     height: 100vh;
+     width: 100%;
+     background-color: black;
+     background-image: url(homeg.gif);
+     background-position: center center;
+     background-size: cover;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
 }
 .slide{
-    margin-bottom: 20px;
+     margin-bottom: 20px;
 }
 .layihe1{
-    background-image: url('https://r.resimlink.com/nqGbFS9-dcW.gif');
-    background-size: cover;
-    background-position: center center;
-    opacity: 80%;
-    background-repeat: no-repeat;
+     background-image: url(layihgif.gif);
+     background-size: cover;
+     background-position: center center;
+     opacity: 80%;
+     background-repeat: no-repeat;
 }
-
 .bir{
-    display: inline-block;
-    margin-right: 15px;
-    height: 32px;
-    padding: 0 15px;
-    line-height: 32px;
-    font-size: 20px;
-    font-weight: 500;
-    border-radius: 5px;
-    background-color: var(--main-color);
-    color: var(--text-color);
-    opacity: 80%; 
-    box-shadow: 5px 5px 5px whitesmoke;
+     display: inline-block;
+     margin-right: 15px;
+     height: 32px;
+     padding: 0 15px;
+     line-height: 32px;
+     font-size: 20px;
+     font-weight: 500;
+     border-radius: 5px;
+     background-color: var(--main-color);
+     color: var(--text-color);
+     opacity: 80%; 
+     box-shadow: 5px 5px 5px whitesmoke;
 }
 .iki{
-    display: inline-block;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
+     display: inline-block;
+     color: white;
+     font-size: 20px;
+     font-weight: 500;
 }
 .home-text h1{
-    font-size: var(--big-font);
-    font-weight: 700;
-    color: var(--text-color);
-    list-style: 1.1;
-    margin: 0 0 8px;
-    opacity: 80%;
+     font-size: var(--big-font);
+     font-weight: 700;
+     color: var(--text-color);
+     list-style: 1.1;
+     margin: 0 0 8px;
+     opacity: 80%;
 }
 .home-text h3{
-    color: var(--text-color);
-    margin: 0 0 35px;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.1;
-    opacity: 80%;
+     color: var(--text-color);
+     margin: 0 0 35px;
+     font-size: 2rem;
+     font-weight: 700;
+     line-height: 1.1;
+     opacity: 80%;
 }
 .home-text p{
-    color: whitesmoke;
-    font-size: var(--p-font);
-    line-height: 1.8;
-    margin-bottom: 40px;
+     color: whitesmoke;
+     font-size: var(--p-font);
+     line-height: 1.8;
+     margin-bottom: 40px;
 }
 .button{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
 }
-
 .button1{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
 }
 .container{
-    width: 90%;
-    max-width: 1200px;
-    margin: 0px auto;
+     width: 90%;
+     max-width: 1200px;
+     margin: 0px auto;
 }
 .btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition:  all .45s ease;
-    margin-right: 10px;
-    margin-bottom: 15px;
-  
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition:  all .45s ease;
+     margin-right: 10px;
+     margin-bottom: 15px;
 }
 .pagebtn{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-    margin-right: 10px;
-    margin-bottom: 15px;
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all .45s ease;
+     margin-right: 10px;
+     margin-bottom: 15px;
 }
 .pagebtn:hover{
-    transform: scale(0.9);
+     transform: scale(0.9);
 }
 .pagebtn0 {
-    min-width: 200px;
-    align-items: center;
-  display: inline-block;
-  padding: 10px 20px;
-  background: var(--main-color);
-  border-radius: 50px;
-  color: var(--text-color);
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  font-weight: 600;
-  transition: all 0.45s ease;
-  margin-right: -50px;
-  margin-bottom: 20px;
-  opacity: 0.8;
-  box-shadow: 6px 4px 6px rgba(0, 0, 0, 0.1);
+     min-width: 200px;
+     align-items: center;
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 0.9rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all 0.45s ease;
+     margin-right: -50px;
+     margin-bottom: 20px;
+     opacity: 0.8;
+     box-shadow: 6px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .pagebtn0:hover {
-  transform: scale(0.95);
-  opacity: 1;
-  box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.2), 6px 6px 20px rgba(0, 0, 0, 0.3);
+     transform: scale(0.95);
+     opacity: 1;
+     box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.2), 6px 6px 20px rgba(0, 0, 0, 0.3);
 }
 .pagebtn2{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-    margin-right: 10px;
-    margin-bottom: 15px; 
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all .45s ease;
+     margin-right: 10px;
+     margin-bottom: 15px; 
 }
 .pagebtn2:hover{
-    transform: scale(0.9);
+     transform: scale(0.9);
 }
 .pagebtn3{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-    margin-right: 10px;
-    margin-bottom: 15px;
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all .45s ease;
+     margin-right: 10px;
+     margin-bottom: 15px;
 }
 .pagebtn3:hover{
-    transform: scale(0.9);
+     transform: scale(0.9);
 }
 .pagebtn4{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-    margin-right: 10px;
-    margin-bottom: 15px;
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all .45s ease;
+     margin-right: 10px;
+     margin-bottom: 15px;
 }
 .pagebtn4:hover{
-    transform: scale(0.9);
+     transform: scale(0.9);
 }
 .page2btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-    margin-right: 10px ;
-    margin-bottom: 15px;
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all .45s ease;
+     margin-right: 10px ;
+     margin-bottom: 15px;
 }
 .page2btn:hover{
-    transform: scale(0.9);
+     transform: scale(0.9);
 }
 .page2btn2{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-    margin-right: 10px;
-    margin-bottom: 15px;
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all .45s ease;
+     margin-right: 10px;
+     margin-bottom: 15px;
 }
 .page2btn2:hover{
-    transform: scale(0.9);
+     transform: scale(0.9);
 }
 .page4btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-    margin-right: 10px;
-    margin-bottom: 15px;
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all .45s ease;
+     margin-right: 10px;
+     margin-bottom: 15px;
 }
 .page4btn:hover{
-    transform: scale(0.9);
+     transform: scale(0.9);
 }
 .page4-2btn{
-    display: inline-block;
-    padding: 10px 20px ;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-    margin-right: 10px;
-    margin-bottom: 15px;
+     display: inline-block;
+     padding: 10px 20px ;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all .45s ease;
+     margin-right: 10px;
+     margin-bottom: 15px;
 }
 .page4-2btn:hover{
-    transform: scale(0.9);
+     transform: scale(0.9);
 }
 .page4-3btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-    margin-right: 10px;
-    margin-bottom: 15px;
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all .45s ease;
+     margin-right: 10px;
+     margin-bottom: 15px;
 }
 .page4-3btn:hover{
-    transform: scale(0.9);
+     transform: scale(0.9);
 }
 .page5btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-    margin-right: 10px;
-    margin-bottom: 15px;
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all .45s ease;
+     margin-right: 10px;
+     margin-bottom: 15px;
 }
 .page5btn:hover{
-    transform: scale(0.9);
+     transform: scale(0.9);
 }
 .page6btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-    margin-right: 10px;
-    margin-bottom: 15px;
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all .45s ease;
+     margin-right: 10px;
+     margin-bottom: 15px;
 }
 .page6btn:hover{
-    transform: scale(0.9);
+     transform: scale(0.9);
 }
 .page6-2btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-    margin-right: 10px;
-    margin-bottom: 15px;
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all .45s ease;
+     margin-right: 10px;
+     margin-bottom: 15px;
 }
 .page6-2btn:hover{
-    transform: scale(0.9);
+     transform: scale(0.9);
 }
 .page7btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-    margin-right: 10px;
-    margin-bottom: 15px;
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all .45s ease;
+     margin-right: 10px;
+     margin-bottom: 15px;
 }
 .page7btn:hover{
-    transform:scale(0.9) ;
+     transform:scale(0.9) ;
 }
 .page8btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 50px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: all .45s ease;
-    margin-right: 10px;
-    margin-bottom: 15px;
+     display: inline-block;
+     padding: 10px 20px;
+     background: var(--main-color);
+     border-radius: 50px;
+     color: var(--text-color);
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: all .45s ease;
+     margin-right: 10px;
+     margin-bottom: 15px;
 }
 .page8btn:hover{
     transform: scale(0.9);
@@ -665,7 +644,7 @@ header.sticky{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 3rem;
-    background-image: url('https://r.resimlink.com/ocDZhqukU_.jpg');
+    background-image: url(aboutimg2.jpg);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -678,7 +657,7 @@ header.sticky{
     display: grid; 
     align-items: center;
     gap: 3rem;
-    background-image: url('https://r.resimlink.com/POh14zXAVD.jpg');
+    background-image: url(sutun1.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
@@ -704,7 +683,8 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background-image: url('https://r.resimlink.com/nqGbFS9-dcW.gif');
+    background: linear-gradient(to bottom , #fde618, #f44336);
+    transform-style: preserve-3d;
     background-attachment: fixed;
     transform-style: preserve-3d;
     perspective: 1px;
@@ -732,7 +712,7 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background: linear-gradient(to bottom , #fde618, #f44336);
+    background-image: url(layihgif.gif);
     transform-style: preserve-3d;
     background-attachment: fixed;
     background-size: cover;
@@ -757,7 +737,7 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background-image: url('https://r.resimlink.com/nqGbFS9-dcW.gif');
+    background: linear-gradient(to bottom , #fde618, #f44336);
     background-attachment: fixed;
     transform-style: preserve-3d;
     perspective: 1px;
@@ -784,7 +764,7 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background-image: url('https://r.resimlink.com/POh14zXAVD.jpg');
+    background-image: url(sutun1.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -811,7 +791,7 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background-image: url('https://r.resimlink.com/nqGbFS9-dcW.gif');
+    background: linear-gradient(to bottom , #fde618, #f44336);
     backdrop-filter: blur(5px);
     background-attachment: fixed;
     transform-style: preserve-3d;
@@ -839,7 +819,7 @@ header.sticky{
     display: grid;
     align-items: center;
     gap:  3rem;
-    background-image: url('https://r.resimlink.com/nqGbFS9-dcW.gif');
+    background: linear-gradient(to bottom , #fde618, #f44336);
     backdrop-filter: blur(5px);
     background-attachment: fixed;
     transform-style: preserve-3d;
@@ -866,7 +846,7 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background: linear-gradient(to bottom , #fde618, #f44336);
+    background-image: url(layihgif.gif);
     backdrop-filter: blur(5px);
     background-attachment: fixed;
     transform-style: preserve-3d;
@@ -892,7 +872,7 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background-image: url('https://r.resimlink.com/nqGbFS9-dcW.gif');
+    background: linear-gradient(to bottom , #fde618, #f44336);
     backdrop-filter: blur(5px);
     background-attachment: fixed;
     transform-style: preserve-3d;
@@ -918,7 +898,7 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background-image: url('https://r.resimlink.com/POh14zXAVD.jpg');
+    background-image: url(sutun1.jpg);
     backdrop-filter: blur(50px);
     background-size: cover;
     background-attachment: fixed;
@@ -943,7 +923,7 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background-image: url('https://r.resimlink.com/nqGbFS9-dcW.gif');
+    background: linear-gradient(to bottom , #fde618, #f44336);
     backdrop-filter: blur(5px);
     background-attachment: fixed;
     transform-style: preserve-3d;
@@ -969,7 +949,7 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background: linear-gradient(to bottom , #fde618, #f44336);
+    background-image: url(layihgif.gif);
     backdrop-filter: blur(5px);
     background-attachment: fixed;
     transform-style: preserve-3d;
@@ -995,7 +975,7 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background: url('https://r.resimlink.com/nqGbFS9-dcW.gif') ;
+    background: linear-gradient(to bottom , #fde618, #f44336);
     backdrop-filter: blur(5px);
     background-attachment: fixed;
     transform-style: preserve-3d;
@@ -1020,7 +1000,7 @@ header.sticky{
     display: grid;
     align-items: center;
     gap: 3rem;
-    background-image: url('https://r.resimlink.com/POh14zXAVD.jpg');
+    background-image: url(sutun1.jpg);
     backdrop-filter: blur(5px);
     background-attachment: fixed;
     transform-style: preserve-3d;
@@ -1585,7 +1565,7 @@ header.sticky{
     border-radius: 50px;
     transition: all .45s ease;
     margin-bottom: 20px;
-    background-image: url('https://r.resimlink.com/b_1rvN4Rcy7.jpg');
+    background-image: url(sebeke1.jpg);
     background-size: cover ;
     background-position: center;
 }
@@ -1597,7 +1577,7 @@ header.sticky{
     border-radius: 50px;
     transition: all .45s ease;
     margin-bottom: 20px;
-    background-image: url('https://r.resimlink.com/EjYK8.jpg');
+    background-image: url(20yanvar2.jpg);
     background-size: cover ;
     background-position: center;   
 }
@@ -1610,7 +1590,7 @@ header.sticky{
     min-height: 500px;
     transition: all .45s ease;
     margin-bottom: 20px;
-    background-image: url('https://r.resimlink.com/ZWQIyrGnz.jpg');
+    background-image: url(iskenderov1.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -1621,7 +1601,7 @@ header.sticky{
     min-height: 500px;
     transition: all .45s ease;
     margin-bottom: 20px;
-    background-image: url('https://r.resimlink.com/GSvoE9Q-.jpg');
+    background-image: url(novruz1.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -1632,7 +1612,7 @@ header.sticky{
     min-height: 500px;
     transition: all .45s ease;
     margin-bottom: 20px;
-    background-image: url('https://r.resimlink.com/OLN_yoJUVRv.jpg');
+    background-image: url(noy1.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -1643,7 +1623,7 @@ header.sticky{
     min-height: 500px;
     transition: all .45s ease;
     margin-bottom: 20px;
-    background-image: url('https://r.resimlink.com/DAyImO.jpg');
+    background-image: url(xina3.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -1654,7 +1634,7 @@ header.sticky{
     min-height: 500px;
     transition: all .45s ease;
     margin-bottom: 20px;
-    background-image: url('https://r.resimlink.com/dmNF9O.jpg');
+    background-image: url(zerer3.jpg);
     background-size: cover;
     background-position: right;
 }
@@ -2036,7 +2016,7 @@ header.sticky{
    height: 100%;   
 }
 .contact{
-   background-image: url('https://r.resimlink.com/nqGbFS9-dcW.gif');
+   background-image: url(layihgif.gif);
    background-position: center;
    background-repeat: no-repeat; 
    background-size: cover;
@@ -2888,9 +2868,6 @@ iframe {
     height: 450px;
   }
 }
-
-
-
  </style>
  <script>
     function showAlert() {
@@ -2904,12 +2881,7 @@ iframe {
     link.classList.add('animate');
   });
 });
-
 </script>
-
-
-
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2932,10 +2904,7 @@ iframe {
           <li><a href="#portfolio">Yeni Layihələrim</a></li>
           <li><a href="#contact">Əlaqə</a></li>
         </ul>
-
       </header>
-      
-   
 <!--home section design-->
     <section class="home" id="home">
         <div class="home-text">
@@ -2956,12 +2925,11 @@ iframe {
             </div>
         </div>
     </section>
-
 <!--about section design-->
     <section class="about" id="aboutid">
         <div class="about-img" >  
-            <img  align="center" src="https://r.resimlink.com/x8H9_vw5n0uQ.jpg" alt="Teknik Hata Oluştu" > <br><br><br><br>
-            <img  align="center" src="https://r.resimlink.com/Vgnli0_.jpg"> <br><br><br><br>
+            <img  align="center" src="vgr1.jpg" alt="Teknik Hata Oluştu" > <br><br><br><br>
+            <img  align="center" src="vgr2.jpg"> <br><br><br><br>
         </div>
         <div class="about-text">
             <h2>Mənim <span>Haqqımda</span></h2>
@@ -3024,7 +2992,7 @@ iframe {
                 </div>
         </div>
     <div class="about-img">
-        <img  src="https://r.resimlink.com/EQPzf.jpg"  > <br><br>
+        <img  src="aboutimg.jpg" > <br><br>
         <br> <a href="#services" class="mbtn"> Layihələrim haqqında məlumat almaq </a> 
      </div>     
     </section>
@@ -3122,10 +3090,10 @@ iframe {
             </div>
         </div>
         <div class="box1-img" >
-            <div align="center" style="background-image: url('https://r.resimlink.com/dsJU4nHSQ_kt.jpg');"></div>
-            <div align="center" style="background-image: url('https://r.resimlink.com/RiHdZT0e.jpg');"></div>
-            <div align="center" style="background-image: url('https://r.resimlink.com/Ff6vr.jpg');"></div> 
-            <div align="center" style="background-image: url('https://r.resimlink.com/fxwvJz_6Rl8e.jpg');"></div>
+            <div align="center" style="background-image: url('tekelduz1.jpg');"></div>
+            <div align="center" style="background-image: url('tekelduz2.jpg');"></div>
+            <div align="center" style="background-image: url('tekelduz3.jpg');"></div> 
+            <div align="center" style="background-image: url('tekelduz4.jpg');"></div>
             </div>     
     </section>
 <!--box1-2page-->
@@ -3143,10 +3111,10 @@ iframe {
             </div>
         </div>
         <div class="box1-2img" >
-            <div align="center" style="background-image: url('https://r.resimlink.com/2ZrYpAFuUOe.jpg');"></div>
-            <div align="center" style="background-image: url('https://r.resimlink.com/8ZqrJ.jpg');"></div>
-            <div align="center" style="background-image: url('https://r.resimlink.com/sATz5OU8.jpg');"></div> 
-            <div align="center" style="background-image: url('https://r.resimlink.com/PVEX2L.jpg');"></div>
+            <div align="center" style="background-image: url('pir1.jpg');"></div>
+            <div align="center" style="background-image: url('pir2.jpg');"></div>
+            <div align="center" style="background-image: url('pir3.jpg');"></div> 
+            <div align="center" style="background-image: url('pir4.jpg');"></div>
         </div>            
 </section>
 <!--box1-3page-->
@@ -3168,10 +3136,10 @@ iframe {
         </div>
     </div>
     <div class="box1-3img">
-        <div align="center" style="background-image: url('https://r.resimlink.com/1ecA8Wv_RngY.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/pLEKR518BaUl.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/jC-nD4zpuS.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/4jh0UZmJTA.jpg');"></div>   
+        <div align="center" style="background-image: url('reqs1.jpg');"></div>
+        <div align="center" style="background-image: url('reqs2.jpg');"></div>
+        <div align="center" style="background-image: url('reqs3.jpg');"></div> 
+        <div align="center" style="background-image: url('reqs4.jpg');"></div>   
     </div>  
 </section>
 
@@ -3189,20 +3157,20 @@ iframe {
             </div>
     </div>
     <div class="box1-4img">
-        <div align="center" style="background-image: url('https://r.resimlink.com/b_1rvN4Rcy7.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/caMdOikj7fo8.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/2mcR3QYPC-9.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/ywpl1NZfx.jpg');"></div>   
+        <div align="center" style="background-image: url('sebeke1.jpg');"></div>
+        <div align="center" style="background-image: url('sebeke2.jpg');"></div>
+        <div align="center" style="background-image: url('sebeke3.jpg');"></div> 
+        <div align="center" style="background-image: url('sebeke4.jpg');"></div>   
     </div>
 </section>
 
 <!--section box2 page2 tasarım-->
 <section class="box2page2" id="box2page2">
     <div class="box2-img" >
-        <div align="center" style="background-image: url('https://r.resimlink.com/wGXaVc.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/EjYK8.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/M3va6pBVCuIU.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/NU4A_XPvF.jpg');"></div> <br><br>
+        <div align="center" style="background-image: url('20yanvar1.jpg');"></div>
+        <div align="center" style="background-image: url('20yanvar2.jpg');"></div>
+        <div align="center" style="background-image: url('20yanvar3.jpg');"></div> 
+        <div align="center" style="background-image: url('20yanvar4.jpg');"></div> <br><br>
      </div>   
      <div class="box2-text">
         <h2 align="center"> Muzeyimizdə <span>anım günləri</span> hörmət ilə anılır</h2> <br><br>
@@ -3236,10 +3204,10 @@ iframe {
         </div>
     </div>
     <div class="box4-img" >
-        <div align="center" style="background-image: url('https://r.resimlink.com/ZWQIyrGnz.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/awxdWugS.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/kF1lZjeJ6z8.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/XtoZxAbW.jpg');"></div> <br><br>
+        <div align="center" style="background-image: url('iskenderov1.jpg');"></div>
+        <div align="center" style="background-image: url('iskenderov2.jpg');"></div>
+        <div align="center" style="background-image: url('iskenderov3.jpg');"></div> 
+        <div align="center" style="background-image: url('iskenderov4.jpg');"></div> <br><br>
      </div> 
 </section>          
 
@@ -3260,10 +3228,10 @@ iframe {
         </div>
     </div>
     <div class="box4-img" >
-        <div align="center" style="background-image: url('https://r.resimlink.com/zOH1KhAr-0if.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/e-RMFzfKVa.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/-F2d7_xwb.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/14QsZ_AJB.jpg');"></div> <br><br>
+        <div align="center" style="background-image: url('orucov1.jpg');"></div>
+        <div align="center" style="background-image: url('orucov2.jpg');"></div>
+        <div align="center" style="background-image: url('orucov3.jpg');"></div> 
+        <div align="center" style="background-image: url('orucov4.jpg');"></div> <br><br>
      </div>
 </section>          
 
@@ -3284,10 +3252,10 @@ iframe {
         </div>
     </div>
     <div class="box5-img" >
-        <div align="center" style="background-image: url('https://r.resimlink.com/PzOhHsC6.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/KLutnzixDp.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/DiCcqx.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/q3xwALcPXS.jpg');"></div> <br><br>
+        <div align="center" style="background-image: url('zahid1.jpg');"></div>
+        <div align="center" style="background-image: url('zahid2.jpg');"></div>
+        <div align="center" style="background-image: url('zahid3.jpg');"></div> 
+        <div align="center" style="background-image: url('zahid4.jpg');"></div> <br><br>
      </div> 
 </section>  
 
@@ -3295,10 +3263,10 @@ iframe {
 <section class="box5page5" id="box5page5">
    
     <div class="box4-img" >
-        <div align="center" style="background-image: url('https://r.resimlink.com/GSvoE9Q-.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/X7-90KGbW.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/4fkemITF9pOY.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/WxLpHn.jpg');"></div> <br><br>
+        <div align="center" style="background-image: url('novruz1.jpg');"></div>
+        <div align="center" style="background-image: url('novruz2.jpg');"></div>
+        <div align="center" style="background-image: url('novruz3.jpg');"></div> 
+        <div align="center" style="background-image: url('novruz4.jpg');"></div> <br><br>
      </div> 
     <div class="box4-text"><br><br>
         <h2 align="center">Muzeyimizdə milli bayramlarımız <span> qeyd olunur </span> </h2><br><br>
@@ -3340,10 +3308,10 @@ iframe {
         </div>
     </div>
     <div class="box6-img" >
-        <div align="center" style="background-image: url('https://r.resimlink.com/OLN_yoJUVRv.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/l-6a7V2pDThF.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/3XUro.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/Spgo0D9xWPJ.jpg');"></div> <br><br> 
+        <div align="center" style="background-image: url('noy1.jpg');"></div>
+        <div align="center" style="background-image: url('noy2.jpg');"></div>
+        <div align="center" style="background-image: url('noy3.jpg');"></div> 
+        <div align="center" style="background-image: url('noy4.jpg');"></div> <br><br> 
      </div> 
 </section>
 
@@ -3367,19 +3335,19 @@ iframe {
         </div>
     </div>
     <div class="box6-2img">
-        <div align="center" style="background-image: url('https://r.resimlink.com/vyWBLGdgzeHX.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/5KjIWY.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/gtJiF.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/Oq2EVen1T.jpg');"></div> <br><br> 
+        <div align="center" style="background-image: url('sahmat1.jpg');"></div>
+        <div align="center" style="background-image: url('sahmat2.jpg');"></div>
+        <div align="center" style="background-image: url('sahmat3.jpg');"></div> 
+        <div align="center" style="background-image: url('sahmat4.jpg');"></div> <br><br> 
     </div>
 </section>
 <!--section box7 page7 tasarim-->
 <section class="box7page7" id="box7page7">
     <div class="box7-img">
-        <div align="center" style="background-image: url('https://r.resimlink.com/WVvY9.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/GxonS9VrD.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/DAyImO.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/N9D2X.jpg');"></div> <br><br> 
+        <div align="center" style="background-image: url('xina1.jpg');"></div>
+        <div align="center" style="background-image: url('xina2.jpg');"></div>
+        <div align="center" style="background-image: url('xina3.jpg');"></div> 
+        <div align="center" style="background-image: url('xina4.jpg');"></div> <br><br> 
     </div>
     <div class="box7-text">
         <h2 align="center">Muzeyimizdə <span>milli adət və ənənələrin</span> yaşadılması üçün tədbirlər keçirlməkdədir</h2><br><br>
@@ -3416,10 +3384,10 @@ iframe {
          </div>
      </div>
      <div class="box8-img">
-        <div align="center" style="background-image: url('https://r.resimlink.com/erv1PmF.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/DF-CJI5u.jpg');"></div>
-        <div align="center" style="background-image: url('https://r.resimlink.com/dmNF9O.jpg');"></div> 
-        <div align="center" style="background-image: url('https://r.resimlink.com/EmA_gxOn.jpg');"></div> <br><br> 
+        <div align="center" style="background-image: url('zerer1.jpg');"></div>
+        <div align="center" style="background-image: url('zerer2.jpg');"></div>
+        <div align="center" style="background-image: url('zerer3.jpg');"></div> 
+        <div align="center" style="background-image: url('zerer4.jpg');"></div> <br><br> 
     </div>
 </section>
 
@@ -3475,7 +3443,7 @@ iframe {
        <p>Tüm Hakları Vüqar Mustafayev'e aittir. Tüm hakları saklıdır © 2023.</p>
        <p align="center"> Bu site, TekÇip firması tarafından kurulmuş olup tüm hakları korunmaktadır. </p>
        <br>
-       <a class="pagebtn0" href="https://xn--tekip-0ra.com/" Target="_blank">tekçip.com</a>
+       <a class="pagebtn0" href="https://www.vugarmustafayev.com/" Target="_blank">tekçip.com</a>
    </div>
    <div class="top">
          <a href="#home" class="page9btn"><i class='bx bx-up-arrow-alt' ></i>   Ana ekrana Dön</a>      
